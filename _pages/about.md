@@ -1,3 +1,13 @@
+---
+permalink: /
+title: ""
+excerpt: "About me"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
 About Me
 ======
  I am a Ph.D. student at Shandong University, supervised by [Prof. Wenrui Diao](https://diaowenrui.github.io/), and I expect to graduate in June 2025. My research interests are primarily in **Mobile Security** , **Mobile Measurement**, and **System Security**.
