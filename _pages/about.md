@@ -30,7 +30,7 @@ Publications
 
 Invited Talks
 ------
-- Exploration of Static Vulnerability Detection Methods for Android
+- Exploration of Static Vulnerability Detection Methods for Android.
   - May 2023: 首届武汉网络安全创新论坛
 
 External Reviewer
