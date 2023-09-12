@@ -19,7 +19,7 @@ Education
 
 Publications
 ------
-- **[APSEC'23]** **Shishuai Yang**, Qinsheng Hou, Shuang Li and Wenrui Diao. Do App Developers Follow the Android Official Security Guidelines? The 30th Asia-Pacific Software Engineering Conference, Seoul, Korea.  December 4-7, 2023. [CCF C][PDF]
+- **[APSEC'23]** **Shishuai Yang**, Qinsheng Hou, Shuang Li and Wenrui Diao. Do App Developers Follow the Android Official Security Guidelines? The 30th Asia-Pacific Software Engineering Conference, Seoul, Korea.  December 4-7, 2023. [CCF C] [PDF]
 - **[USENIX-Sec'23]** Rui Li, Wenrui Diao, **Shishuai Yang**, Xiangyu Liu, Shanqing Guo, and Kehuan Zhang. Lost in Conversion: Exploit Data Structure Conversion with Attribute Loss to Break Android Systems. The 32nd USENIX Security Symposium, Anaheim, CA, USA.  August 9-11, 2023. [CCF A] [\[PDF\]](../assets/usenixsecurity23-li-rui.pdf) 
 - **[ICSE'22]** **Shishuai Yang**, Rui Li, Jiongyi Chen, Wenrui Diao, and Shanqing Guo. Demystifying Android Non-SDK APIs: Measurement and Understanding. The 44th IEEE/ACM International Conference on Software Engineering, Pittsburgh, PA, USA. May 21-29, 2022. [CCF A] [\[PDF\]](../assets/icse22-yang.pdf) 
 - **[IEEE TSE]** Rui Li, Wenrui Diao, Zhou Li, **Shishuai Yang**, Shuang Li, and Shanqing Guo. Android Custom Permissions Demystified: A Comprehensive Security Evaluation. IEEE Transactions on Software Engineering, 48(11):4465-4484, 2022. [CCF A] [\[PDF\]](../assets/tse-li.pdf)
