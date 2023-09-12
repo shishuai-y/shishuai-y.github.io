@@ -14,8 +14,8 @@ About Me
 
 Education
 ======
-- Sep 2020 - Current: Ph.D. in Cyber Science and Technology, supervised by [Prof. Wenrui Diao](https://diaowenrui.github.io/), Shandong University, Qindao, China.
-- Sep 2016 - Jun 2020: B.E. in Software Engineering, Henan University, Kaifeng, China.
+- **Sep 2020 - Current**: Ph.D. in Cyber Science and Technology, supervised by [Prof. Wenrui Diao](https://diaowenrui.github.io/), Shandong University, Qindao, China.
+- **Sep 2016 - Jun 2020**: B.E. in Software Engineering, Henan University, Kaifeng, China.
 
 Publications
 ------
@@ -30,7 +30,7 @@ Publications
 
 Invited Talks
 ------
-- Exploration of Static Vulnerability Detection Methods for Android.
+- **Exploration of Static Vulnerability Detection Methods for Android.**
   - May 2023: 首届武汉网络安全创新论坛
 
 External Reviewer
