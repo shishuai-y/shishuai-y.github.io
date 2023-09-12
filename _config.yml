@@ -11,7 +11,7 @@ title                    : "Shishuai's Personal Homepage"
 title_separator          : "-"
 name                     : &name "Shishuai Yang"
 description              : 
-url                      : "https://shishuai-y.github.io/"
+url                      : "https://shishuai-y.github.io"
 baseurl                  : 
 repository               : shishuai-y/shishuai-y.github.io
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
