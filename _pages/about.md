@@ -1,13 +1,3 @@
----
-permalink: /
-title: "Shishuai Yang 杨士帅"
-excerpt: "About me"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
----
-
 
 About Me
 ======
