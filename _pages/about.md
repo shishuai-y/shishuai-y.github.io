@@ -11,16 +11,20 @@ redirect_from:
 
 About Me
 ======
- I am a Ph.D. student at Shandong University, supervised by Prof. Wenrui Diao, and I expect to graduate in June 2025. My research interests are primarily in **Mobile Security** , **Mobile Measurement**, and **System Security**.
+ I am a Ph.D. student at Shandong University, supervised by [Prof. Wenrui Diao](https://diaowenrui.github.io/), and I expect to graduate in June 2025. My research interests are primarily in **Mobile Security** , **Mobile Measurement**, and **System Security**.
 
 Education
 ======
-- Sep 2020 - Current: Ph.D. in Cyber Science and Technology, supervised by Prof. Wenrui Diao, Shandong University, Qindao, China.
+- Sep 2020 - Current: Ph.D. in Cyber Science and Technology, supervised by [Prof. Wenrui Diao](https://diaowenrui.github.io/), Shandong University, Qindao, China.
 - Sep 2016 - Jun 2020: B.E. in Software Engineering, Henan University, Kaifeng, China.
 
-Site-wide configuration
+Publications
 ------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+- **[APSEC'23]** **Shishuai Yang**, Qinsheng Hou, Shuang Li and Wenrui Diao. Do App Developers Follow the Android Official Security Guidelines? The 30th Asia-Pacific Software Engineering Conference, Seoul, Korea.  December 4-7, 2023. [CCF C]} \\
+- **[USENIX-Sec'23]** Rui Li, Wenrui Diao, **Shishuai Yang**, Xiangyu Liu, Shanqing Guo, and Kehuan Zhang. Lost in Conversion: Exploit Data Structure Conversion with Attribute Loss to Break Android Systems. The 32nd USENIX Security Symposium, Anaheim, CA, USA.  August 9-11, 2023. [CCF A]} \\
+- **[ICSE'22]** **Shishuai Yang**, Rui Li, Jiongyi Chen, Wenrui Diao, and Shanqing Guo. Demystifying Android Non-SDK APIs: Measurement and Understanding. The 44th IEEE/ACM International Conference on Software Engineering, Pittsburgh, PA, USA. May 21-29, 2022. [CCF A]} \\
+- **[IEEE TSE]** Rui Li, Wenrui Diao, Zhou Li, **Shishuai Yang**, Shuang Li, and Shanqing Guo. Android Custom Permissions Demystified: A Comprehensive Security Evaluation. IEEE Transactions on Software Engineering, 48(11):4465-4484, 2022. [CORE A*]} \\
+- **[QRS'22]** Guangwei Tian, Jiongyi Chen, Kailun Yan, **Shishuai Yang**, and Wenrui Diao. Cast Away: On the Security of DLNA Deployments in the SmartTV Ecosystem. The 22nd IEEE International Conference on Software Quality, Reliability and Security, Guangzhou, China. December 5-9, 2022. [CCF C]
 
 Create content & metadata
 ------
