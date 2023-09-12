@@ -31,9 +31,9 @@ External Reviewer
 - **[TOSEM]** ACM Transactions on Software Engineering and Methodology, 2021.
 
 
-
-
-
-For more info
+Misc
 ------
-More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+- [CCF Rec. Conference Deadlines](https://ccfddl.github.io/)
+- [Call4Papers](http://123.57.137.208/ccf/ccf-4.jsp)
+- [IEEE Jounal Template Seletor](https://template-selector.ieee.org/secure/templateSelector/downloadTemplate)
+- [CCF Conference Rank](https://www.ccf.org.cn/Academic_Evaluation/TCSE_SS_PDL/)
