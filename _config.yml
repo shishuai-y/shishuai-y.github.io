@@ -9,11 +9,11 @@
 locale                   : "en-US"
 title                    : "ShiShuai's Personal Homepage"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
-url                      : 
+name                     : &name "Shishuai Yang"
+description              : 
+url                      : "https://shishuai-y.github.io/"
 baseurl                  : 
-repository               : 
+repository               : shishuai-y/shishuai-y.github.io
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
