@@ -1,4 +1,3 @@
-
 About Me
 ======
  I am a Ph.D. student at Shandong University, supervised by [Prof. Wenrui Diao](https://diaowenrui.github.io/), and I expect to graduate in June 2025. My research interests are primarily in **Mobile Security** , **Mobile Measurement**, and **System Security**.
@@ -33,7 +32,7 @@ External Reviewer
 
 Misc
 ------
-- [CCF Rec. Conference Deadlines](https://ccfddl.github.io/)
+- [CCF Conference Deadlines](https://ccfddl.github.io/)
 - [Call4Papers](http://123.57.137.208/ccf/ccf-4.jsp)
 - [IEEE Jounal Template Seletor](https://template-selector.ieee.org/secure/templateSelector/downloadTemplate)
 - [CCF Conference Rank](https://www.ccf.org.cn/Academic_Evaluation/TCSE_SS_PDL/)
