@@ -12,10 +12,6 @@ About Me
 ======
  I am a Ph.D. student at Shandong University, supervised by [Prof. Wenrui Diao](https://diaowenrui.github.io/), and I expect to graduate in June 2025. My research interests are primarily in **Mobile Security** , **Mobile Measurement**, and **System Security**.
 
-Education
-======
-- **Sep 2020 - Current:** Ph.D. in Cyber Science and Technology, supervised by [Prof. Wenrui Diao](https://diaowenrui.github.io/), Shandong University, Qindao, China.
-- **Sep 2016 - Jun 2020:** B.E. in Software Engineering, Henan University, Kaifeng, China.
 
 Publications
 ------
