@@ -16,7 +16,7 @@ redirect_from:
 - [Jan 2024] I become a visiting Ph.D. student at NUS.
 - [Dec 2023] Our paper on Android OS forward compatibility is accepted by SANER 2024.
 - [Aug 2023] Our paper on Android official security guidelines is accepted by APSEC 2023.
-- [Jun 2023] Our paper on Android data structure conversion is accepted by USENIX-Sec 23.
+- [Jun 2023] Our paper on Android data structure conversion is accepted by USENIX-Sec 2023.
 
 
 
