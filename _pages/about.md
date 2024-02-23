@@ -8,9 +8,16 @@ redirect_from:
   - /about.html
 ---
 
-About Me
-======
+## About Me
  I am a Ph.D. student at Shandong University, supervised by [Prof. Wenrui Diao](https://diaowenrui.github.io/), and I expect to graduate in June 2025. My research interests are primarily in **Mobile Security** , **Mobile Measurement**, and **System Security**.
+
+## Recent News
+- [Feb 2024] Our paper on privte browsing modes is accepted by WWW 2024.
+- [Jan 2024] I become a visiting Ph.D. student at NUS.
+- [Dec 2023] Our paper on Android OS forward compatibility is accepted by SANER 2024.
+- [Aug 2023] Our paper on Android official security guidelines is accepted by APSEC 2023.
+- [Jun 2023] Our paper on Android data structure conversion is accepted by USENIX-Sec 23.
+
 
 
 Publications
