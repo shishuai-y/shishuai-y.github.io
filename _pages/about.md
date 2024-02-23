@@ -17,6 +17,7 @@ redirect_from:
 - [Dec 2023] Our paper on Android OS forward compatibility is accepted by SANER 2024.
 - [Aug 2023] Our paper on Android official security guidelines is accepted by APSEC 2023.
 - [Jun 2023] Our paper on Android data structure conversion is accepted by USENIX-Sec 2023.
+- [Dec 2021] Our paper on Android non-SDK APis is accepted by ICSE 2022.
 
 
 
