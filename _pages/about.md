@@ -8,6 +8,7 @@ redirect_from:
   - /about.html
 ---
 <div align="center">
+<img src=../images/sdu.png width=33% />
 <img src=../images/sdu1.png width=33% />
 </div>
 
