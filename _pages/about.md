@@ -34,6 +34,12 @@ External Reviewer
 - **[INSCRYPT]** International Conference on Information Security and Cryptology, 2022.
 - **[TOSEM]** ACM Transactions on Software Engineering and Methodology, 2021.
 
+Awards
+------
+- 评网络空间安全学院2025年研究生优秀成果奖
+- 奇安信奖学金（2024）
+- 国际公派留学奖学金（2023）
+- 网络安全学院学生创新资助计划（2022）
 
 Misc
 ------
