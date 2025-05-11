@@ -16,7 +16,7 @@ author_profile: true
 6. S. Li, R. Li, **S. Yang**, and W. Diao. Android's Cat-and-Mouse Game: Understanding Evasion Techniques against Dyanmic Analysis. [ISSRE'24][CCF B]
 7. X. Liu, W. Li, Q. Hou, **S. Yang**, L. Ying, W. Diao, Y. Li, S. Guo, and H. Duan. From Promises to Practice: Evaluating the Private Browsing Modes of Android Browser Apps.} [WWW'24] [CCF A]
 8. S. Li, R. Li, Y. Yu, K. Yan, **S. Yang**, and W. Diao. Understanding Android OS Forward Compatibility Support for Legacy Apps: A Data-Driven Analysis. [SANER'24] [CCF B]
-9. R. Li, W. Diao, **S. Yang**, X. Liu, S. Guo, and K. Zhang. \textbf{Lost in Conversion: Exploit Data Structure Conversion with Attribute Loss to Break Android Systems.} [USENIX-Sec'23] [CCF A] [CVE-2021-39695, CVE-2022-20392, CVE-2023-20971]
+9. R. Li, W. Diao, **S. Yang**, X. Liu, S. Guo, and K. Zhang. Lost in Conversion: Exploit Data Structure Conversion with Attribute Loss to Break Android Systems. [USENIX-Sec'23] [CCF A] [CVE-2021-39695, CVE-2022-20392, CVE-2023-20971]
 10. R. Li, W. Diao, Z. Li, **S. Yang**, S. Li, and S. Guo. Android Custom Permissions Demystified: A Comprehensive Security Evaluation. [IEEE TSE][CCF A][JCR Q1]
 11. G. Tian, J. Chen, K. Yan, **S. Yang**, and W. Diao. Cast Away: On the Security of DLNA Deployments in the SmartTV Ecosystem.  [QRS'22] [CCF C] 
   
