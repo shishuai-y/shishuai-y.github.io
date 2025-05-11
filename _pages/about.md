@@ -7,8 +7,10 @@ redirect_from:
   - /about/
   - /about.html
 ---
+<div align="center">
+<img src=../images/sdu1.png width=33% />
+</div>
 
-![sdu1](../images/sdu1.png  =600x600)
 
 ## News
 - [Feb 2024] Our paper on privte browsing modes is accepted by WWW 2024.
