@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-![CSDN图标](images/site-logo.png)
+![CSDN图标](../images/site-logo.png)
 
 ## News
 - [Feb 2024] Our paper on privte browsing modes is accepted by WWW 2024.
