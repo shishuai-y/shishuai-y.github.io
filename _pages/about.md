@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-![](./images/sdu.png =100x100)
+![](../images/sdu.png =100x100)
 
 
 
