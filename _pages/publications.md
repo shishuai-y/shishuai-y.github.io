@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-**Publications Ranking Statistics：CCF A: 4 papers, CCF B: 1 paper, CCF C: 2 papers.**
+**Publications Ranking Statistics：CCF A: 4 papers, CCF B: 4 paper, CCF C: 3 papers.**
 
 
 1. **S. Yang**, R. Li, J. Chen, W. Diao, and S. Guo. Demystifying Android Non-SDK APIs: Measurement and Understanding. [ICSE'22] [CCF A]
