@@ -10,7 +10,7 @@ author_profile: true
 
 1. **S. Yang**, R. Li, J. Chen, W. Diao, and S. Guo. Demystifying Android Non-SDK APIs: Measurement and Understanding. [ICSE'22] [CCF A]
 2. **S. Yang**, Q. Hou,  S. Li, F. Xu, and W. Diao. From Guidelines to Practice: Assessing Android App Developer Compliance with Google's Security Recommendations.[ESEM][CCF B][中科院二区][JCR一区]
-3. Z. Qiu, **S. Yang**, Y. Yu, Y. Luo, and W. Diao. Understanding Security Risks in Mobile-to-PC Screen Mirroring: An Empirical Study. \textbf{[通信作者]}[CYSE][中科院四区][JCR一区][CCF C] 
+3. Z. Qiu, **S. Yang**, Y. Yu, Y. Luo, and W. Diao. Understanding Security Risks in Mobile-to-PC Screen Mirroring: An Empirical Study. [通信作者][CYSE][中科院四区][JCR一区][CCF C] 
 4. **S. Yang**, G. Bai, R. Lin, J. Guo, and W. Diao. Beyond the Horizon: Exploring Cross-Market Security Discrepancies in Parallel Android Apps. [ISSRE'24][CCF B] 
 5. **S. Yang**, Q. Hou, S. Li and W. Diao. Do App Developers Follow the Android Official Security Guidelines?  [APSEC'23] [CCF C]
 6. S. Li, R. Li, **S. Yang**, and W. Diao. Android's Cat-and-Mouse Game: Understanding Evasion Techniques against Dyanmic Analysis. [ISSRE'24][CCF B]
