@@ -15,4 +15,4 @@ npm run dev
 npm run build:pages
 ```
 
-The `main` branch is deployed automatically through GitHub Pages.
+The `master` branch is deployed automatically through GitHub Pages.
