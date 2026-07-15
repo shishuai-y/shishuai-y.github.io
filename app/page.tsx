@@ -1,5 +1,13 @@
 const publications = [
   {
+     year: "2026",
+    venue: "IEEE TSE",
+    rank: "Q1, CCF A",
+    authors: "Z. Xie, M. Chen, Y. Gao, S. Yang, W. Diao, Xiangyu Liu",
+    title:
+      "Dialing Danger: Large-Scale Mining and Risk Assessment of Android Secret Codes in OEM Firmware",
+  },
+  {
     year: "2026",
     venue: "SANER",
     rank: "CCF B · CORE A",
