@@ -206,9 +206,6 @@ export default function Home() {
               >
                 Google Scholar <span aria-hidden="true">↗</span>
               </a>
-              <a className="text-action" href="./cv.pdf" download>
-                下载简历 <span aria-hidden="true">↓</span>
-              </a>
             </div>
           </div>
           <div className="portrait-wrap">
