@@ -373,15 +373,16 @@ export default function Home() {
                   <li>指导学生获河南省第七届“金盾信安杯”网络与数据安全大赛省级三等奖</li>
                   <li>指导学生获第十届“御网杯”网络安全大赛线上挑战赛一等奖*3、二等奖*6、三等奖*3</li>
                   <li>2026年C4网络技术挑战赛选拔赛三等奖</li>
+                  <li>第二十一届中国研究生电子设计竞赛华中赛区二等奖</li>
                 </ul>
               </article>
               <article>
-                <span className="service-label">Honors</span>
+                <span className="service-label">Projects</span>
                 <h3>主持项目</h3>
                 <ul>
                   <li>青年基金 [5w]</li>
                   <li>一流网络安全创新资助计划 [6w]</li>
-     
+                  <li>河南省重点科研项目</li>
                 </ul>
               </article>
             </div>
