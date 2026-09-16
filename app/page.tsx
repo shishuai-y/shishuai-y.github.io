@@ -1,6 +1,15 @@
 const publications = [
   {
-     year: "2026",
+    year: "2027",
+    venue: "Expert Systems With Applications",
+    rank: "Vol. 333 · 134346",
+    authors: "S. Yang, X. Li, K. Yan, C. Wang, W. Ren, Y. Chen, and K. Chen",
+    title:
+      "EvidenceMalGraph: An evidence-grounded modular framework for Android malware family attribution and campaign analysis",
+    note: "第一作者",
+  },
+  {
+    year: "2026",
     venue: "IEEE TSE",
     rank: "Q1, CCF A",
     authors: "Z. Xie, M. Chen, Y. Gao, S. Yang, W. Diao, Xiangyu Liu",
