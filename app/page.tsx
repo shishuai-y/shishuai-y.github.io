@@ -174,7 +174,6 @@ export default function Home() {
             <strong>杨士帅</strong>
           </a>
           <nav aria-label="主要导航">
-            <a href="#research">研究</a>
             <a href="#publications">论文</a>
             <a href="#experience">经历</a>
             <a href="#service">服务</a>
@@ -235,71 +234,11 @@ export default function Home() {
       </section>
 
       <div id="content">
-        <section className="section research-section" id="research">
-          <div className="shell">
-            <div className="section-heading">
-              <div>
-                <p className="section-kicker">01 · Research</p>
-                <h2>研究项目</h2>
-              </div>
-              <p>
-                从真实软件生态中识别系统性安全风险，并将大规模测量转化为可验证、可复用的研究结论。
-              </p>
-            </div>
-
-            <div className="project-grid">
-              <article className="project-card featured-project">
-                <p className="project-index">01 / Android Security</p>
-                <h3>Android Apps 漏洞静态检测方法探究</h3>
-                <p>
-                  基于 Android 安全开发最佳实践，评估任意文件读写、路径遍历、不安全网络通信和组件导出等常见风险，覆盖第三方市场
-                  251,749 个应用及 Google Play 108,091 个应用。
-                </p>
-                <div className="project-meta">
-                  <span>网安创新计划资助</span>
-                  <span>6 万元</span>
-                  <span>武汉网络安全创新论坛优秀成果</span>
-                </div>
-                <a
-                  className="inline-link"
-                  href="https://www.cybersac.cn/detail/1702256698066042881"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  查看项目报道 <span aria-hidden="true">↗</span>
-                </a>
-              </article>
-
-              <article className="project-card">
-                <p className="project-index">02 / Ecosystem Measurement</p>
-                <h3>跨市场 Apps 的安全与隐私差分分析</h3>
-                <p>
-                  系统研究同一 Android 应用在 Google Play 与第三方市场版本间的安全、保护机制和权限使用差异，并开源研究数据及
-                  Android APIs 16–33 权限映射。
-                </p>
-                <div className="project-meta">
-                  <span>跨市场测量</span>
-                  <span>安全与隐私</span>
-                  <span>开放数据</span>
-                </div>
-                <a
-                  className="inline-link"
-                  href="https://doi.org/10.5281/zenodo.13232037"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  访问开放数据 <span aria-hidden="true">↗</span>
-                </a>
-              </article>
-            </div>
-          </div>
-        </section>
-
         <section className="section publications-section" id="publications">
           <div className="shell">
             <div className="section-heading publication-heading">
               <div>
-                <p className="section-kicker">02 · Publications</p>
+                <p className="section-kicker">01 · Publications</p>
                 <h2>科研成果</h2>
               </div>
               <div className="publication-count">
@@ -331,7 +270,7 @@ export default function Home() {
         <section className="section experience-section" id="experience">
           <div className="shell experience-grid">
             <div>
-              <p className="section-kicker">03 · Experience</p>
+              <p className="section-kicker">02 · Experience</p>
               <h2>教育与经历</h2>
               <p className="section-intro">
                 现任郑州航空工业管理学院讲师，持续开展移动安全与软件生态测量研究。
@@ -356,7 +295,7 @@ export default function Home() {
           <div className="shell">
             <div className="section-heading">
               <div>
-                <p className="section-kicker">04 · Community</p>
+                <p className="section-kicker">03 · Community</p>
                 <h2>学术服务与教学</h2>
               </div>
               <p>参与国际安全会议审稿与 Artifact Evaluation，并承担网络空间安全专业课程教学。</p>
