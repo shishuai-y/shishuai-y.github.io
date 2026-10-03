@@ -42,6 +42,7 @@ const publications = [
     authors: "S. Yang, G. Bai, R. Lin, J. Guo, and W. Diao",
     title:
       "Beyond the Horizon: Exploring Cross-Market Security Discrepancies in Parallel Android Apps",
+    note: "第一作者",
   },
   {
     year: "2024",
@@ -83,6 +84,7 @@ const publications = [
     rank: "CCF C · CORE C",
     authors: "S. Yang, Q. Hou, S. Li, and W. Diao",
     title: "Do App Developers Follow the Android Official Security Guidelines?",
+    note: "第一作者",
   },
   {
     year: "2022",
@@ -90,6 +92,7 @@ const publications = [
     rank: "CCF A · CORE A*",
     authors: "S. Yang, R. Li, J. Chen, W. Diao, and S. Guo",
     title: "Demystifying Android Non-SDK APIs: Measurement and Understanding",
+    note: "第一作者",
   },
   {
     year: "2022",
@@ -106,6 +109,7 @@ const publications = [
     authors: "S. Yang, Q. Hou, S. Li, F. Xu, and W. Diao",
     title:
       "From Guidelines to Practice: Assessing Android App Developer Compliance with Google's Security Recommendations",
+    note: "第一作者",
   },
   {
     year: "—",
@@ -114,6 +118,7 @@ const publications = [
     authors: "S. Yang, R. Lin, J. Guo, G. Bai, Y. Luo, and W. Diao",
     title:
       "Investigating Cross-Market Android Apps: Security, Protection, and Components",
+    note: "第一作者",
   },
   {
     year: "—",
