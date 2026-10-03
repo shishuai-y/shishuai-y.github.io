@@ -429,21 +429,19 @@ export default function Home() {
         <section className="section awards-section" id="awards">
           <div className="shell">
             <div className="section-heading awards-heading">
-              <div>
-                <p className="section-kicker">04 · Student Awards</p>
-                <h2>指导学生获奖</h2>
-              </div>
+              <h2>指导学生获奖</h2>
               <p className="award-count">{studentAwards.length} 项赛事</p>
             </div>
+            <div className="award-scroll" role="region" aria-label="指导学生获奖列表" tabIndex={0}>
             <ol className="award-list">
               {studentAwards.map((award) => (
                 <li className="award-item" key={award.competition}>
                   <div className="award-symbol" aria-hidden="true">
-                    <Trophy size={22} strokeWidth={1.7} />
+                    <Trophy size={18} strokeWidth={1.7} />
                   </div>
                   <div className="award-body">
-                    <p className="award-edition">{award.edition}</p>
                     <h3>{award.competition}</h3>
+                    <p className="award-edition">{award.edition}</p>
                   </div>
                   <ul className="award-results" aria-label="所获奖项">
                     {award.prizes.map((prize) => (
@@ -455,6 +453,7 @@ export default function Home() {
                 </li>
               ))}
             </ol>
+            </div>
           </div>
         </section>
       </div>
