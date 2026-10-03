@@ -198,6 +198,21 @@ footer a:hover {
   margin-top: 28px;
 }
 
+.intro a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.intro a:hover {
+  color: var(--teal);
+}
+
+.intro a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
 .interest-list span {
   border: 1px solid #cfd6e5;
   border-radius: 4px;
