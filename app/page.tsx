@@ -2,7 +2,7 @@ const publications = [
   {
     year: "2027",
     venue: "Expert Systems With Applications",
-    rank: "Vol. 333 · 134346",
+    rank: "中科院一区 TOP",
     authors: "S. Yang, X. Li, K. Yan, C. Wang, W. Ren, Y. Chen, and K. Chen",
     title:
       "EvidenceMalGraph: An evidence-grounded modular framework for Android malware family attribution and campaign analysis",
@@ -154,6 +154,7 @@ export default function Home() {
           </a>
           <nav aria-label="主要导航">
             <a href="#publications">论文</a>
+            <a href="#opensource">开源</a>
             <a href="#service">服务</a>
           </nav>
           <a className="nav-contact" href="mailto:shishuai@zua.edu.cn">
@@ -245,11 +246,75 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="section opensource-section" id="opensource">
+          <div className="shell">
+            <div className="section-heading">
+              <div>
+                <p className="section-kicker">02 · Open Source</p>
+                <h2>开源项目</h2>
+              </div>
+            </div>
+            <article className="repository">
+              <div className="repository-body">
+                <p className="repository-owner">shishuai-y /</p>
+                <h3>
+                  <a
+                    href="https://github.com/shishuai-y/Android-Permission-Mappings"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Android-Permission-Mappings
+                  </a>
+                </h3>
+                <p className="repository-description">
+                  面向 Android API 16–33 的权限映射数据集，整理 SDK API、
+                  ContentProvider 与 Intent 的权限关联，为 Android 应用安全分析与跨版本研究提供数据支持。
+                </p>
+                <ul className="repository-topics" aria-label="权限映射类型">
+                  <li>SDK</li>
+                  <li>ContentProvider</li>
+                  <li>Intent</li>
+                </ul>
+                <p className="repository-paper">
+                  关联论文 · ISSRE 2024
+                  <a
+                    href="https://doi.org/10.1109/ISSRE62328.2024.00059"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Beyond the Horizon: Exploring Cross-Market Security Discrepancies in Parallel Android Apps
+                  </a>
+                </p>
+              </div>
+              <div className="repository-details">
+                <dl>
+                  <div>
+                    <dt>Android API</dt>
+                    <dd>16–33</dd>
+                  </div>
+                  <div>
+                    <dt>权限映射类型</dt>
+                    <dd>3</dd>
+                  </div>
+                </dl>
+                <a
+                  className="repository-link"
+                  href="https://github.com/shishuai-y/Android-Permission-Mappings"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  查看 GitHub 仓库 <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
         <section className="section service-section" id="service">
           <div className="shell">
             <div className="section-heading">
               <div>
-                <p className="section-kicker">02 · Community</p>
+                <p className="section-kicker">03 · Community</p>
                 <h2>学术服务与教学</h2>
               </div>
               <p>参与国际安全会议审稿与 Artifact Evaluation，并承担网络空间安全专业课程教学。</p>
