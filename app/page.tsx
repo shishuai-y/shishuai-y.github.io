@@ -1,7 +1,7 @@
 const publications = [
   {
     year: "2027",
-    venue: "Expert Systems With Applications",
+    venue: "ESWA",
     rank: "中科院一区 TOP",
     authors: "S. Yang, X. Li, K. Yan, C. Wang, W. Ren, Y. Chen, and K. Chen",
     title:
@@ -256,7 +256,6 @@ export default function Home() {
             </div>
             <article className="repository">
               <div className="repository-body">
-                <p className="repository-owner">shishuai-y /</p>
                 <h3>
                   <a
                     href="https://github.com/shishuai-y/Android-Permission-Mappings"

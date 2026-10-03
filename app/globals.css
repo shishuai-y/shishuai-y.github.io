@@ -492,12 +492,6 @@ footer a:hover {
   padding-top: 32px;
 }
 
-.repository-owner {
-  margin: 0 0 10px;
-  color: var(--ink);
-  font: 14px/1.5 Consolas, monospace;
-}
-
 .repository h3 {
   margin: 0;
   font-size: 28px;
