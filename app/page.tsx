@@ -346,8 +346,8 @@ export default function Home() {
                 <span className="service-label">Projects</span>
                 <h3>主持项目</h3>
                 <ul>
-                  <li>青年基金 [5w]</li>
-                  <li>一流网络安全创新资助计划 [6w]</li>
+                  <li>青年基金</li>
+                  <li>一流网络安全创新资助计划</li>
                   <li>河南省重点科研项目</li>
                 </ul>
               </article>
