@@ -132,27 +132,6 @@ const publications = [
   },
 ];
 
-const education = [
-  {
-    period: "2020.09 — 2025.06",
-    school: "山东大学",
-    detail: "网络空间安全 · 博士（硕博连读）",
-    note: "导师：刁文瑞教授",
-  },
-  {
-    period: "2024.01 — 2024.06",
-    school: "National University of Singapore",
-    detail: "School of Computing · 联合培养博士",
-    note: "国家留学基金委资助 · 导师：Guangdong Bai、Jinsong Dong",
-  },
-  {
-    period: "2016.09 — 2020.06",
-    school: "河南大学",
-    detail: "软件工程 · 本科",
-    note: "GPA 3.69/4.00 · 保研",
-  },
-];
-
 const interests = [
   "自动化漏洞挖掘",
   "LLM 驱动安全分析",
@@ -175,7 +154,6 @@ export default function Home() {
           </a>
           <nav aria-label="主要导航">
             <a href="#publications">论文</a>
-            <a href="#experience">经历</a>
             <a href="#service">服务</a>
           </nav>
           <a className="nav-contact" href="mailto:shishuai@zua.edu.cn">
@@ -267,35 +245,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section experience-section" id="experience">
-          <div className="shell experience-grid">
-            <div>
-              <p className="section-kicker">02 · Experience</p>
-              <h2>教育与经历</h2>
-              <p className="section-intro">
-                现任郑州航空工业管理学院讲师，持续开展移动安全与软件生态测量研究。
-              </p>
-            </div>
-            <div className="timeline">
-              {education.map((item) => (
-                <article key={item.period}>
-                  <time>{item.period}</time>
-                  <div>
-                    <h3>{item.school}</h3>
-                    <p>{item.detail}</p>
-                    <small>{item.note}</small>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="section service-section" id="service">
           <div className="shell">
             <div className="section-heading">
               <div>
-                <p className="section-kicker">03 · Community</p>
+                <p className="section-kicker">02 · Community</p>
                 <h2>学术服务与教学</h2>
               </div>
               <p>参与国际安全会议审稿与 Artifact Evaluation，并承担网络空间安全专业课程教学。</p>
@@ -345,7 +299,7 @@ export default function Home() {
             <p>Cybersecurity researcher and lecturer.</p>
           </div>
           <a href="mailto:shishuai@zua.edu.cn">shishuai@zua.edu.cn</a>
-          <p className="updated">最后更新于 2026.07.15</p>
+          <p className="updated">最后更新于 2026.10.03</p>
         </div>
       </footer>
     </main>
