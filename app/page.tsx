@@ -1,4 +1,4 @@
-import { FileText } from "lucide-react";
+import { FileText, Trophy } from "lucide-react";
 import MotionEffects from "./motion-effects";
 
 const publications = [
@@ -163,6 +163,33 @@ const interests = [
   "物联网系统安全",
 ];
 
+const studentAwards = [
+  {
+    competition: "河南省“金盾信安杯”网络与数据安全大赛",
+    edition: "第七届",
+    prizes: [{ text: "省级三等奖", place: 3 }],
+  },
+  {
+    competition: "“御网杯”网络安全大赛",
+    edition: "第十届 · 线上挑战赛",
+    prizes: [
+      { text: "一等奖 × 3", place: 1 },
+      { text: "二等奖 × 6", place: 2 },
+      { text: "三等奖 × 3", place: 3 },
+    ],
+  },
+  {
+    competition: "C4 网络技术挑战赛",
+    edition: "2026年 · 选拔赛",
+    prizes: [{ text: "三等奖", place: 3 }],
+  },
+  {
+    competition: "中国研究生电子设计竞赛",
+    edition: "第二十一届 · 华中赛区",
+    prizes: [{ text: "二等奖", place: 2 }],
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -181,6 +208,7 @@ export default function Home() {
             <a href="#publications">论文</a>
             <a href="#opensource">开源</a>
             <a href="#service">服务</a>
+            <a href="#awards">获奖</a>
           </nav>
           <a className="nav-contact" href="mailto:shishuai@zua.edu.cn">
             联系我
@@ -378,13 +406,11 @@ export default function Home() {
               </article>
               <article>
                 <span className="service-label">Teaching</span>
-                <h3>教学与指导</h3>
+                <h3>课程教学</h3>
                 <ul>
-                  <li>主讲课程：《恶意代码分析》、《网络安全概论》、《数字取证技术》</li>
-                  <li>指导学生获河南省第七届“金盾信安杯”网络与数据安全大赛省级三等奖</li>
-                  <li>指导学生获第十届“御网杯”网络安全大赛线上挑战赛一等奖*3、二等奖*6、三等奖*3</li>
-                  <li>2026年C4网络技术挑战赛选拔赛三等奖</li>
-                  <li>第二十一届中国研究生电子设计竞赛华中赛区二等奖</li>
+                  <li>《恶意代码分析》</li>
+                  <li>《网络安全概论》</li>
+                  <li>《数字取证技术》</li>
                 </ul>
               </article>
               <article>
@@ -397,6 +423,38 @@ export default function Home() {
                 </ul>
               </article>
             </div>
+          </div>
+        </section>
+
+        <section className="section awards-section" id="awards">
+          <div className="shell">
+            <div className="section-heading awards-heading">
+              <div>
+                <p className="section-kicker">04 · Student Awards</p>
+                <h2>指导学生获奖</h2>
+              </div>
+              <p className="award-count">{studentAwards.length} 项赛事</p>
+            </div>
+            <ol className="award-list">
+              {studentAwards.map((award) => (
+                <li className="award-item" key={award.competition}>
+                  <div className="award-symbol" aria-hidden="true">
+                    <Trophy size={22} strokeWidth={1.7} />
+                  </div>
+                  <div className="award-body">
+                    <p className="award-edition">{award.edition}</p>
+                    <h3>{award.competition}</h3>
+                  </div>
+                  <ul className="award-results" aria-label="所获奖项">
+                    {award.prizes.map((prize) => (
+                      <li className="award-prize" data-place={prize.place} key={prize.text}>
+                        {prize.text}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
       </div>

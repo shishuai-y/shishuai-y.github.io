@@ -9,7 +9,7 @@ export default function MotionEffects() {
 
     const elements = Array.from(
       document.querySelectorAll<HTMLElement>(
-        "main .section-heading, main .publication, main .repository, main .service-grid > article",
+        "main .section-heading, main .publication, main .repository, main .service-grid > article, main .award-item",
       ),
     );
     const observer = new IntersectionObserver(
