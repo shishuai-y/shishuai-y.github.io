@@ -1,3 +1,5 @@
+import MotionEffects from "./motion-effects";
+
 const publications = [
   {
     year: "2027",
@@ -142,6 +144,7 @@ const interests = [
 export default function Home() {
   return (
     <main>
+      <MotionEffects />
       <a className="skip-link" href="#content">
         跳到主要内容
       </a>
