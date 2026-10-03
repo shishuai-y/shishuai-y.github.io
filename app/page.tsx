@@ -1,3 +1,4 @@
+import { FileText } from "lucide-react";
 import MotionEffects from "./motion-effects";
 
 const publications = [
@@ -9,6 +10,7 @@ const publications = [
     title:
       "EvidenceMalGraph: An evidence-grounded modular framework for Android malware family attribution and campaign analysis",
     note: "第一作者",
+    pdf: "./papers/eswa2027-evidencemalgraph.pdf",
   },
   {
     year: "2026",
@@ -17,6 +19,7 @@ const publications = [
     authors: "Z. Xie, M. Chen, Y. Gao, S. Yang, W. Diao, Xiangyu Liu",
     title:
       "RuleDroid: LLM-Augmented Synthesis of Static Security Detection Rules for Android Apps",
+    pdf: "./papers/tse2026-ruledroid.pdf",
   },
   {
     year: "2026",
@@ -25,6 +28,7 @@ const publications = [
     authors: "R. Lin, S. Yang, F. Xu, and W. Diao",
     title:
       "Dialing Danger: Large-Scale Mining and Risk Assessment of Android Secret Codes in OEM Firmware",
+    pdf: "./papers/saner2026-dialing-danger.pdf",
     note: "共同通讯作者",
   },
   {
@@ -34,6 +38,7 @@ const publications = [
     authors: "W. Li, J. Guo, J. Chen, F. Li, Y. Xing, Y. Xu, S. Yang, and W. Diao",
     title:
       "FirmProj: Detecting Firmware Leakage in IoT Update Processes via Companion App Analysis",
+    pdf: "./papers/ase2025-firmproj.pdf",
   },
   {
     year: "2024",
@@ -42,6 +47,7 @@ const publications = [
     authors: "S. Yang, G. Bai, R. Lin, J. Guo, and W. Diao",
     title:
       "Beyond the Horizon: Exploring Cross-Market Security Discrepancies in Parallel Android Apps",
+    pdf: "./papers/issre2024-beyond-the-horizon.pdf",
     note: "第一作者",
   },
   {
@@ -51,6 +57,7 @@ const publications = [
     authors: "S. Li, R. Li, S. Yang, and W. Diao",
     title:
       "Android's Cat-and-Mouse Game: Understanding Evasion Techniques against Dynamic Analysis",
+    pdf: "./papers/issre2024-cat-and-mouse.pdf",
   },
   {
     year: "2024",
@@ -60,6 +67,7 @@ const publications = [
       "X. Liu, W. Li, Q. Hou, S. Yang, L. Ying, W. Diao, Y. Li, S. Guo, and H. Duan",
     title:
       "From Promises to Practice: Evaluating the Private Browsing Modes of Android Browser Apps",
+    pdf: "./papers/www2024-private-browsing.pdf",
   },
   {
     year: "2024",
@@ -68,6 +76,7 @@ const publications = [
     authors: "S. Li, R. Li, Y. Yu, K. Yan, S. Yang, and W. Diao",
     title:
       "Understanding Android OS Forward Compatibility Support for Legacy Apps: A Data-Driven Analysis",
+    pdf: "./papers/saner2024-forward-compatibility.pdf",
   },
   {
     year: "2023",
@@ -76,6 +85,7 @@ const publications = [
     authors: "R. Li, W. Diao, S. Yang, X. Liu, S. Guo, and K. Zhang",
     title:
       "Lost in Conversion: Exploit Data Structure Conversion with Attribute Loss to Break Android Systems",
+    pdf: "./papers/usenix2023-lost-in-conversion.pdf",
     note: "CVE-2021-39695 · CVE-2022-20392 · CVE-2023-20971",
   },
   {
@@ -84,6 +94,7 @@ const publications = [
     rank: "CCF C · CORE C",
     authors: "S. Yang, Q. Hou, S. Li, and W. Diao",
     title: "Do App Developers Follow the Android Official Security Guidelines?",
+    pdf: "./papers/apsec2023-security-guidelines.pdf",
     note: "第一作者",
   },
   {
@@ -92,6 +103,7 @@ const publications = [
     rank: "CCF A · CORE A*",
     authors: "S. Yang, R. Li, J. Chen, W. Diao, and S. Guo",
     title: "Demystifying Android Non-SDK APIs: Measurement and Understanding",
+    pdf: "./papers/icse2022-non-sdk-apis.pdf",
     note: "第一作者",
   },
   {
@@ -100,6 +112,7 @@ const publications = [
     rank: "CCF C · CORE C",
     authors: "G. Tian, J. Chen, K. Yan, S. Yang, and W. Diao",
     title: "Cast Away: On the Security of DLNA Deployments in the SmartTV Ecosystem",
+    pdf: "./papers/qrs2022-cast-away.pdf",
     note: "CNVD-2022-54667 · CNVD-2022-34589",
   },
   {
@@ -109,6 +122,7 @@ const publications = [
     authors: "S. Yang, Q. Hou, S. Li, F. Xu, and W. Diao",
     title:
       "From Guidelines to Practice: Assessing Android App Developer Compliance with Google's Security Recommendations",
+    pdf: "./papers/emse2025-security-recommendations.pdf",
     note: "第一作者",
   },
   {
@@ -118,6 +132,7 @@ const publications = [
     authors: "S. Yang, R. Lin, J. Guo, G. Bai, Y. Luo, and W. Diao",
     title:
       "Investigating Cross-Market Android Apps: Security, Protection, and Components",
+    pdf: "./papers/emse2026-cross-market-apps.pdf",
     note: "第一作者",
   },
   {
@@ -127,6 +142,7 @@ const publications = [
     authors: "Z. Qiu, S. Yang, Y. Yu, Y. Luo, and W. Diao",
     title:
       "Understanding Security Risks in Mobile-to-PC Screen Mirroring: An Empirical Study",
+    pdf: "./papers/cybersecurity2025-screen-mirroring.pdf",
     note: "共同通讯作者",
   },
   {
@@ -136,6 +152,7 @@ const publications = [
     authors: "R. Li, W. Diao, Z. Li, S. Yang, S. Li, and S. Guo",
     title:
       "Android Custom Permissions Demystified: A Comprehensive Security Evaluation",
+    pdf: "./papers/tse2022-custom-permissions.pdf",
   },
 ];
 
@@ -251,6 +268,18 @@ export default function Home() {
                       <span>{publication.year}</span>
                       <strong>{publication.venue}</strong>
                       <span>{publication.rank}</span>
+                      <a
+                        className="paper-link"
+                        href={publication.pdf}
+                        target="_blank"
+                        rel="noreferrer"
+                        type="application/pdf"
+                        aria-label={`查看 PDF：${publication.title}`}
+                        title="查看论文 PDF"
+                      >
+                        <FileText size={14} aria-hidden="true" />
+                        PDF
+                      </a>
                     </div>
                     <h3>{publication.title}</h3>
                     <p>{publication.authors}</p>
