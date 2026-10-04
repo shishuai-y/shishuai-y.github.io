@@ -287,19 +287,27 @@ export default function Home() {
               杨士帅
               <span>Shishuai Yang</span>
             </h1>
-            <p className="intro">
-              现为郑州航空工业管理学院讲师。本科毕业于河南大学，硕士、博士均毕业于山东大学，
-              博士阶段就读于网络空间安全学院，师从
-              <a href="https://diaowenrui.github.io/" target="_blank" rel="noreferrer">
-                刁文瑞教授
-              </a>
-              。读博期间曾赴新加坡国立大学访学，在
-              <a href="https://baigd.github.io/" target="_blank" rel="noreferrer">
-                Guangdong Bai 教授
-              </a>
-              指导下开展研究。研究聚焦自动化漏洞挖掘、大模型驱动安全分析、
-              移动生态与物联网系统安全。
-            </p>
+            <div className="intro" lang="en">
+              <p>
+                Dr. Shishuai Yang is a lecturer at Zhengzhou University of Aeronautics.
+                His research focuses on automated vulnerability discovery, LLM-driven
+                security analysis, and the security of mobile ecosystems and IoT systems.
+              </p>
+              <p>
+                He received his doctorate from the School of Cyber Science and Engineering,
+                Shandong University (advisor: {" "}
+                <a href="https://diaowenrui.github.io/" target="_blank" rel="noreferrer">
+                  Prof. Wenrui Diao
+                </a>
+                ). During his doctoral studies, he was a visiting student at the National
+                University of Singapore under the supervision of {" "}
+                <a href="https://baigd.github.io/" target="_blank" rel="noreferrer">
+                  Prof. Guangdong Bai
+                </a>
+                . He earned his master&apos;s and bachelor&apos;s degrees from Shandong University
+                and Henan University, respectively.
+              </p>
+            </div>
             <div className="interest-list" aria-label="研究方向">
               {interests.map((interest) => (
                 <span key={interest}>{interest}</span>

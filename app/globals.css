@@ -183,6 +183,14 @@ footer a:hover {
   line-height: 1.8;
 }
 
+.intro p {
+  margin: 0;
+}
+
+.intro p + p {
+  margin-top: 10px;
+}
+
 .interest-list {
   display: flex;
   flex-wrap: wrap;
