@@ -287,17 +287,17 @@ export default function Home() {
               杨士帅
               <span>Shishuai Yang</span>
             </h1>
-            <p className="role">郑州航空工业管理学院 · 讲师</p>
             <p className="intro">
-              博士毕业于山东大学网络空间安全学院，师从
+              现为郑州航空工业管理学院讲师。本科毕业于河南大学，硕士、博士均毕业于山东大学，
+              博士阶段就读于网络空间安全学院，师从
               <a href="https://diaowenrui.github.io/" target="_blank" rel="noreferrer">
                 刁文瑞教授
               </a>
-              。博士期间曾赴新加坡国立大学访学，在
+              。读博期间曾赴新加坡国立大学访学，在
               <a href="https://baigd.github.io/" target="_blank" rel="noreferrer">
                 Guangdong Bai 教授
               </a>
-              的指导下开展研究。研究聚焦自动化漏洞挖掘、大模型驱动安全分析、
+              指导下开展研究。研究聚焦自动化漏洞挖掘、大模型驱动安全分析、
               移动生态与物联网系统安全。
             </p>
             <div className="interest-list" aria-label="研究方向">
@@ -427,7 +427,11 @@ export default function Home() {
                       </a>
                     </div>
                     <h3>{publication.title}</h3>
-                    <p>{publication.authors}</p>
+                    <p>
+                      {publication.authors.split(/(\bS\. Yang\b)/).map((author, index) =>
+                        author === "S. Yang" ? <strong key={index}>{author}</strong> : author,
+                      )}
+                    </p>
                     {publication.note && <small>{publication.note}</small>}
                   </div>
                 </article>
