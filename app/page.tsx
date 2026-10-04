@@ -381,7 +381,7 @@ export default function Home() {
               {publications.map((publication) => {
                 const figure = publicationFigures.get(publication.pdf);
                 if (!figure) throw new Error(`Missing figure for ${publication.title}`);
-                const figureUrl = `./paper-figures/${figure.file.slice(0, -4)}.webp`;
+                const figureUrl = `./paper-figures/${figure.file.slice(0, -4)}.webp?v=${figure.clip.join("-")}`;
                 return (
                 <article className="publication" data-kind={publication.kind} key={publication.title}>
                   <a
