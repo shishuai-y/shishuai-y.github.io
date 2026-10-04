@@ -28,7 +28,7 @@ const publications: Publication[] = [
     year: "2026",
     venue: "IEEE TSE",
     kind: "journal",
-    rank: ["Q1", "CCF A"],
+    rank: ["中科院一区", "Q1", "CCF A"],
     authors: "Z. Xie, M. Chen, Y. Gao, S. Yang, W. Diao, Xiangyu Liu",
     title:
       "RuleDroid: LLM-Augmented Synthesis of Static Security Detection Rules for Android Apps",
@@ -175,7 +175,7 @@ const publications: Publication[] = [
     year: "—",
     venue: "IEEE TSE",
     kind: "journal",
-    rank: ["CCF A", "JCR Q1"],
+    rank: ["中科院一区", "CCF A", "JCR Q1"],
     authors: "R. Li, W. Diao, Z. Li, S. Yang, S. Li, and S. Guo",
     title:
       "Android Custom Permissions Demystified: A Comprehensive Security Evaluation",
@@ -196,8 +196,8 @@ const publicationStats = [
   },
   {
     key: "cas-q1",
-    label: "已标注中科院一区",
-    count: publications.filter((paper) => paper.rank.includes("中科院一区 TOP")).length,
+    label: "中科院一区",
+    count: publications.filter((paper) => paper.rank.some((rank) => rank.startsWith("中科院一区"))).length,
   },
   {
     key: "ccf-a",
@@ -211,6 +211,12 @@ const interests = [
   "LLM 驱动安全分析",
   "移动生态安全",
   "物联网系统安全",
+];
+
+const courses = [
+  { title: "《恶意代码分析》", type: "选修课", theory: 32, practical: 16 },
+  { title: "《网络安全概论》", type: "必修课", theory: 32, practical: 16 },
+  { title: "《数字取证技术》", type: "选修课", theory: 40, practical: 8 },
 ];
 
 const studentAwards = [
@@ -255,6 +261,7 @@ export default function Home() {
             <strong>杨士帅</strong>
           </a>
           <nav aria-label="主要导航">
+            <a href="#news">News</a>
             <a href="#publications">论文</a>
             <a href="#opensource">开源</a>
             <a href="#service">服务</a>
@@ -325,6 +332,18 @@ export default function Home() {
       </section>
 
       <div id="content">
+        <section className="section news-section" id="news" aria-labelledby="news-heading">
+          <div className="shell news-layout">
+            <h2 id="news-heading">News</h2>
+            <ul className="news-list">
+              <li>
+                <time dateTime="2026-09">Sep 2026:</time>
+                <span>One paper accepted by ESWA 2027</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         <section className="section publications-section" id="publications">
           <div className="shell">
             <div className="section-heading publication-heading">
@@ -358,7 +377,7 @@ export default function Home() {
                       {publication.rank.map((rank) => (
                         <span
                           key={rank}
-                          className={rank === "CCF A" ? "rank-ccf-a" : rank === "中科院一区 TOP" ? "rank-cas-q1" : undefined}
+                          className={rank === "CCF A" ? "rank-ccf-a" : rank.startsWith("中科院一区") ? "rank-cas-q1" : undefined}
                         >
                           {rank}
                         </span>
@@ -483,10 +502,19 @@ export default function Home() {
               </div>
             </div>
             <ul className="course-list community-body">
-              {["《恶意代码分析》", "《网络安全概论》", "《数字取证技术》"].map((course) => (
-                <li key={course}>
-                  <BookOpen size={18} aria-hidden="true" />
-                  <span>{course}</span>
+              {courses.map((course) => (
+                <li key={course.title}>
+                  <div className="course-heading">
+                    <h3 className="course-title">
+                      <BookOpen size={18} aria-hidden="true" />
+                      {course.title}
+                    </h3>
+                    <span className="course-type">{course.type}</span>
+                  </div>
+                  <div className="course-details">
+                    <span className="course-hours">{course.theory + course.practical} 学时</span>
+                    <span className="course-split">理论 {course.theory} 学时 + 上机 {course.practical} 学时</span>
+                  </div>
                 </li>
               ))}
             </ul>

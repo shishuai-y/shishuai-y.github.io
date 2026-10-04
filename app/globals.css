@@ -392,6 +392,46 @@ footer a:hover {
   font-weight: 700;
 }
 
+.section.news-section {
+  border-top: 1px solid var(--line);
+  background: white;
+  padding: 32px 0;
+}
+
+.news-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 48px;
+}
+
+.news-section h2 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 16px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.news-list time {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .publications-section {
   border-top: 1px solid var(--line);
   background: var(--white);
@@ -816,23 +856,49 @@ footer a:hover {
 
 .course-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  border-top: 2px solid var(--blue);
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .course-list li {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: 8px;
-  border-top: 2px solid var(--blue);
+  gap: 16px;
   border-bottom: 1px solid var(--line);
   padding: 12px 0;
   color: var(--ink);
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.6;
+}
+
+.course-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.course-heading,
+.course-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.course-type {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.course-hours,
+.course-split {
+  font-size: 12px;
 }
 
 .course-list svg {
@@ -1026,10 +1092,12 @@ footer a {
   }
 
   .project-grid,
+  .news-layout,
   .community-layout {
     grid-template-columns: 1fr;
   }
 
+  .news-layout,
   .community-layout {
     gap: 24px;
   }
@@ -1070,8 +1138,7 @@ footer a {
     font-size: 28px;
   }
 
-  .academic-service-list > div,
-  .course-list {
+  .academic-service-list > div {
     grid-template-columns: 1fr;
   }
 
@@ -1079,12 +1146,9 @@ footer a {
     gap: 4px;
   }
 
-  .course-list {
-    gap: 8px;
-  }
-
-  .course-list li:not(:first-child) {
-    border-top: 0;
+  .course-list li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px 12px;
   }
 
   .repository {
