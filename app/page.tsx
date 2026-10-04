@@ -436,7 +436,9 @@ export default function Home() {
                               {author === "S. Yang" ? <strong>{author}</strong> : author}
                               {publication.correspondingAuthors?.includes(author) && (
                               <span className="corresponding-author" title="通讯作者" role="img" aria-label="通讯作者">
+                                (
                                 <Mail size={13} aria-hidden="true" />
+                                )
                               </span>
                               )}
                             </span>

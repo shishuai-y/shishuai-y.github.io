@@ -748,6 +748,8 @@ footer a:hover {
 
 .corresponding-author {
   display: inline-flex;
+  align-items: center;
+  gap: 1px;
   margin-left: 4px;
   vertical-align: -2px;
   color: var(--ink);
