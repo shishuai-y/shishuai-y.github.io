@@ -557,17 +557,36 @@ footer a:hover {
 
 .publication {
   display: grid;
-  grid-template-columns: 48px 1fr;
+  grid-template-columns: 200px minmax(0, 1fr);
+  align-items: start;
   gap: 24px;
   border-bottom: 1px solid var(--line);
   padding: 28px 0;
 }
 
-.pub-number {
-  padding-top: 4px;
-  color: var(--ink);
-  font-family: Georgia, "Songti SC", serif;
-  font-size: 15px;
+.pub-thumbnail {
+  display: block;
+  aspect-ratio: 3 / 2;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: white;
+  padding: 6px;
+}
+
+.pub-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pub-thumbnail:hover {
+  border-color: var(--teal);
+}
+
+.pub-thumbnail:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
 }
 
 .pub-labels {
@@ -672,22 +691,40 @@ footer a:hover {
   background: var(--paper);
 }
 
-.opensource-section {
+.section.opensource-section {
   border-top: 1px solid var(--line);
   background: var(--paper);
+  padding: 48px 0;
+}
+
+.opensource-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.opensource-section .section-heading {
+  display: block;
+  margin: 0;
+}
+
+.opensource-section h2 {
+  font-size: 32px;
+  line-height: 1.2;
 }
 
 .repository {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 240px;
-  gap: 64px;
+  grid-template-columns: minmax(0, 1fr) 160px;
+  gap: 24px;
   border-top: 3px solid var(--teal);
-  padding-top: 32px;
+  padding-top: 18px;
 }
 
 .repository h3 {
   margin: 0;
-  font-size: 28px;
+  font-size: 22px;
   line-height: 1.3;
   font-weight: 700;
   overflow-wrap: anywhere;
@@ -708,9 +745,9 @@ footer a:hover {
 
 .repository-description {
   max-width: 720px;
-  margin: 20px 0;
-  font-size: 16px;
-  line-height: 1.85;
+  margin: 12px 0;
+  font-size: 14px;
+  line-height: 1.75;
 }
 
 .repository-topics {
@@ -726,14 +763,14 @@ footer a:hover {
   border: 1px solid #b8d6d2;
   border-radius: 3px;
   background: var(--soft-teal);
-  padding: 5px 10px;
-  font: 13px/1.5 Consolas, monospace;
+  padding: 4px 8px;
+  font: 11px/1.5 Consolas, monospace;
 }
 
 .repository-paper {
-  margin: 28px 0 0;
-  font-size: 14px;
-  line-height: 1.7;
+  margin: 14px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
 }
 
 .repository-paper a {
@@ -748,24 +785,24 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 32px;
+  gap: 16px;
   border-left: 1px solid var(--line);
-  padding-left: 32px;
+  padding-left: 20px;
 }
 
 .repository-details dl {
   display: grid;
-  gap: 24px;
+  gap: 16px;
   margin: 0;
 }
 
 .repository-details dt {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .repository-details dd {
-  margin: 8px 0 0;
-  font-size: 32px;
+  margin: 6px 0 0;
+  font-size: 22px;
   line-height: 1.1;
   font-weight: 600;
 }
@@ -775,9 +812,9 @@ footer a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  min-height: 44px;
+  min-height: 36px;
   border-bottom: 1px solid var(--ink);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -1124,10 +1161,12 @@ footer a {
   }
 
   .project-grid,
+  .opensource-layout,
   .community-layout {
     grid-template-columns: 1fr;
   }
 
+  .opensource-layout,
   .community-layout {
     gap: 24px;
   }
@@ -1142,6 +1181,14 @@ footer a {
 }
 
 @media (max-width: 680px) {
+  .section.opensource-section {
+    padding: 32px 0;
+  }
+
+  .opensource-section h2 {
+    font-size: 28px;
+  }
+
   .news-layout {
     padding: 18px;
   }
@@ -1187,7 +1234,7 @@ footer a {
 
   .repository {
     grid-template-columns: minmax(0, 1fr);
-    gap: 28px;
+    gap: 16px;
   }
 
   .repository h3 {
@@ -1197,11 +1244,22 @@ footer a {
   .repository-details {
     border-left: 0;
     border-top: 1px solid var(--line);
-    padding: 24px 0 0;
+    padding: 12px 0 0;
   }
 
   .repository-details dl {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .repository-details dl > div {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .repository-details dd {
+    margin: 0;
+    font-size: 18px;
   }
 
   .repository-link {
@@ -1284,8 +1342,9 @@ footer a {
     gap: 8px;
   }
 
-  .pub-number {
-    display: none;
+  .pub-thumbnail {
+    width: min(200px, 100%);
+    margin-bottom: 6px;
   }
 
   .publication h3 {

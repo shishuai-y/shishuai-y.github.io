@@ -1,5 +1,6 @@
 import { BookOpen, FileText, Trophy } from "lucide-react";
 import MotionEffects from "./motion-effects";
+import figureSources from "../public/paper-figures/sources.json";
 
 type Publication = {
   year: string;
@@ -206,6 +207,10 @@ const publicationStats = [
   },
 ];
 
+const publicationFigures = new Map(
+  figureSources.map((figure) => [`./papers/${figure.file}`, figure]),
+);
+
 const interests = [
   "自动化漏洞挖掘",
   "LLM 驱动安全分析",
@@ -373,9 +378,29 @@ export default function Home() {
             </dl>
 
             <div className="publication-list">
-              {publications.map((publication, index) => (
+              {publications.map((publication) => {
+                const figure = publicationFigures.get(publication.pdf);
+                if (!figure) throw new Error(`Missing figure for ${publication.title}`);
+                const figureUrl = `./paper-figures/${figure.file.slice(0, -4)}.webp`;
+                return (
                 <article className="publication" data-kind={publication.kind} key={publication.title}>
-                  <div className="pub-number">{String(index + 1).padStart(2, "0")}</div>
+                  <a
+                    className="pub-thumbnail"
+                    href={figureUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`查看论文图示：${publication.title}`}
+                    title={`${figure.figure} · ${figure.description}`}
+                  >
+                    <img
+                      src={figureUrl}
+                      alt={figure.description}
+                      width={Math.round((figure.clip[2] - figure.clip[0]) * 3)}
+                      height={Math.round((figure.clip[3] - figure.clip[1]) * 3)}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
                   <div className="pub-body">
                     <div className="pub-labels">
                       <span>{publication.year}</span>
@@ -406,13 +431,14 @@ export default function Home() {
                     {publication.note && <small>{publication.note}</small>}
                   </div>
                 </article>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
 
         <section className="section opensource-section" id="opensource">
-          <div className="shell">
+          <div className="shell opensource-layout">
             <div className="section-heading">
               <div>
                 <p className="section-kicker">02 · Open Source</p>
