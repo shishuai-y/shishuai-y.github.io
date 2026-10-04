@@ -1,11 +1,23 @@
-import { FileText, Trophy } from "lucide-react";
+import { BookOpen, FileText, Trophy } from "lucide-react";
 import MotionEffects from "./motion-effects";
 
-const publications = [
+type Publication = {
+  year: string;
+  venue: string;
+  kind: "conference" | "journal";
+  rank: string[];
+  authors: string;
+  title: string;
+  note?: string;
+  pdf: string;
+};
+
+const publications: Publication[] = [
   {
     year: "2027",
     venue: "ESWA",
-    rank: "中科院一区 TOP",
+    kind: "journal",
+    rank: ["中科院一区 TOP"],
     authors: "S. Yang, X. Li, K. Yan, C. Wang, W. Ren, Y. Chen, and K. Chen",
     title:
       "EvidenceMalGraph: An evidence-grounded modular framework for Android malware family attribution and campaign analysis",
@@ -15,7 +27,8 @@ const publications = [
   {
     year: "2026",
     venue: "IEEE TSE",
-    rank: "Q1, CCF A",
+    kind: "journal",
+    rank: ["Q1", "CCF A"],
     authors: "Z. Xie, M. Chen, Y. Gao, S. Yang, W. Diao, Xiangyu Liu",
     title:
       "RuleDroid: LLM-Augmented Synthesis of Static Security Detection Rules for Android Apps",
@@ -24,7 +37,8 @@ const publications = [
   {
     year: "2026",
     venue: "SANER",
-    rank: "CCF B · CORE A",
+    kind: "conference",
+    rank: ["CCF B", "CORE A"],
     authors: "R. Lin, S. Yang, F. Xu, and W. Diao",
     title:
       "Dialing Danger: Large-Scale Mining and Risk Assessment of Android Secret Codes in OEM Firmware",
@@ -34,7 +48,8 @@ const publications = [
   {
     year: "2025",
     venue: "ASE",
-    rank: "CCF A · CORE A*",
+    kind: "conference",
+    rank: ["CCF A", "CORE A*"],
     authors: "W. Li, J. Guo, J. Chen, F. Li, Y. Xing, Y. Xu, S. Yang, and W. Diao",
     title:
       "FirmProj: Detecting Firmware Leakage in IoT Update Processes via Companion App Analysis",
@@ -43,7 +58,8 @@ const publications = [
   {
     year: "2024",
     venue: "ISSRE",
-    rank: "CCF B · CORE A",
+    kind: "conference",
+    rank: ["CCF B", "CORE A"],
     authors: "S. Yang, G. Bai, R. Lin, J. Guo, and W. Diao",
     title:
       "Beyond the Horizon: Exploring Cross-Market Security Discrepancies in Parallel Android Apps",
@@ -53,7 +69,8 @@ const publications = [
   {
     year: "2024",
     venue: "ISSRE",
-    rank: "CCF B · CORE A",
+    kind: "conference",
+    rank: ["CCF B", "CORE A"],
     authors: "S. Li, R. Li, S. Yang, and W. Diao",
     title:
       "Android's Cat-and-Mouse Game: Understanding Evasion Techniques against Dynamic Analysis",
@@ -62,7 +79,8 @@ const publications = [
   {
     year: "2024",
     venue: "WWW",
-    rank: "CCF A · CORE A*",
+    kind: "conference",
+    rank: ["CCF A", "CORE A*"],
     authors:
       "X. Liu, W. Li, Q. Hou, S. Yang, L. Ying, W. Diao, Y. Li, S. Guo, and H. Duan",
     title:
@@ -72,7 +90,8 @@ const publications = [
   {
     year: "2024",
     venue: "SANER",
-    rank: "CCF B · CORE A",
+    kind: "conference",
+    rank: ["CCF B", "CORE A"],
     authors: "S. Li, R. Li, Y. Yu, K. Yan, S. Yang, and W. Diao",
     title:
       "Understanding Android OS Forward Compatibility Support for Legacy Apps: A Data-Driven Analysis",
@@ -81,7 +100,8 @@ const publications = [
   {
     year: "2023",
     venue: "USENIX Security",
-    rank: "CCF A · CORE A*",
+    kind: "conference",
+    rank: ["CCF A", "CORE A*"],
     authors: "R. Li, W. Diao, S. Yang, X. Liu, S. Guo, and K. Zhang",
     title:
       "Lost in Conversion: Exploit Data Structure Conversion with Attribute Loss to Break Android Systems",
@@ -91,7 +111,8 @@ const publications = [
   {
     year: "2023",
     venue: "APSEC",
-    rank: "CCF C · CORE C",
+    kind: "conference",
+    rank: ["CCF C", "CORE C"],
     authors: "S. Yang, Q. Hou, S. Li, and W. Diao",
     title: "Do App Developers Follow the Android Official Security Guidelines?",
     pdf: "./papers/apsec2023-security-guidelines.pdf",
@@ -100,7 +121,8 @@ const publications = [
   {
     year: "2022",
     venue: "ICSE",
-    rank: "CCF A · CORE A*",
+    kind: "conference",
+    rank: ["CCF A", "CORE A*"],
     authors: "S. Yang, R. Li, J. Chen, W. Diao, and S. Guo",
     title: "Demystifying Android Non-SDK APIs: Measurement and Understanding",
     pdf: "./papers/icse2022-non-sdk-apis.pdf",
@@ -109,7 +131,8 @@ const publications = [
   {
     year: "2022",
     venue: "QRS",
-    rank: "CCF C · CORE C",
+    kind: "conference",
+    rank: ["CCF C", "CORE C"],
     authors: "G. Tian, J. Chen, K. Yan, S. Yang, and W. Diao",
     title: "Cast Away: On the Security of DLNA Deployments in the SmartTV Ecosystem",
     pdf: "./papers/qrs2022-cast-away.pdf",
@@ -118,7 +141,8 @@ const publications = [
   {
     year: "—",
     venue: "ESEM",
-    rank: "CCF B · JCR Q1",
+    kind: "journal",
+    rank: ["CCF B", "JCR Q1"],
     authors: "S. Yang, Q. Hou, S. Li, F. Xu, and W. Diao",
     title:
       "From Guidelines to Practice: Assessing Android App Developer Compliance with Google's Security Recommendations",
@@ -128,7 +152,8 @@ const publications = [
   {
     year: "—",
     venue: "ESEM",
-    rank: "CCF B · JCR Q1",
+    kind: "journal",
+    rank: ["CCF B", "JCR Q1"],
     authors: "S. Yang, R. Lin, J. Guo, G. Bai, Y. Luo, and W. Diao",
     title:
       "Investigating Cross-Market Android Apps: Security, Protection, and Components",
@@ -138,7 +163,8 @@ const publications = [
   {
     year: "—",
     venue: "Cybersecurity",
-    rank: "CCF C · JCR Q1",
+    kind: "journal",
+    rank: ["CCF C", "JCR Q1"],
     authors: "Z. Qiu, S. Yang, Y. Yu, Y. Luo, and W. Diao",
     title:
       "Understanding Security Risks in Mobile-to-PC Screen Mirroring: An Empirical Study",
@@ -148,11 +174,35 @@ const publications = [
   {
     year: "—",
     venue: "IEEE TSE",
-    rank: "CCF A · JCR Q1",
+    kind: "journal",
+    rank: ["CCF A", "JCR Q1"],
     authors: "R. Li, W. Diao, Z. Li, S. Yang, S. Li, and S. Guo",
     title:
       "Android Custom Permissions Demystified: A Comprehensive Security Evaluation",
     pdf: "./papers/tse2022-custom-permissions.pdf",
+  },
+];
+
+const publicationStats = [
+  {
+    key: "conference",
+    label: "会议论文",
+    count: publications.filter((paper) => paper.kind === "conference").length,
+  },
+  {
+    key: "journal",
+    label: "期刊论文",
+    count: publications.filter((paper) => paper.kind === "journal").length,
+  },
+  {
+    key: "cas-q1",
+    label: "已标注中科院一区",
+    count: publications.filter((paper) => paper.rank.includes("中科院一区 TOP")).length,
+  },
+  {
+    key: "ccf-a",
+    label: "CCF A",
+    count: publications.filter((paper) => paper.rank.includes("CCF A")).length,
   },
 ];
 
@@ -208,6 +258,7 @@ export default function Home() {
             <a href="#publications">论文</a>
             <a href="#opensource">开源</a>
             <a href="#service">服务</a>
+            <a href="#teaching">教学</a>
             <a href="#awards">获奖</a>
           </nav>
           <a className="nav-contact" href="mailto:shishuai@zua.edu.cn">
@@ -283,19 +334,35 @@ export default function Home() {
               </div>
               <div className="publication-count">
                 <strong>{publications.length}</strong>
-                <span>selected works</span>
+                <span>篇论文</span>
               </div>
             </div>
 
+            <dl className="publication-stats" aria-label="论文统计">
+              {publicationStats.map((stat) => (
+                <div key={stat.key} data-stat={stat.key}>
+                  <dt>{stat.label}</dt>
+                  <dd>{stat.count}<span>篇</span></dd>
+                </div>
+              ))}
+            </dl>
+
             <div className="publication-list">
               {publications.map((publication, index) => (
-                <article className="publication" key={publication.title}>
+                <article className="publication" data-kind={publication.kind} key={publication.title}>
                   <div className="pub-number">{String(index + 1).padStart(2, "0")}</div>
                   <div className="pub-body">
                     <div className="pub-labels">
                       <span>{publication.year}</span>
                       <strong>{publication.venue}</strong>
-                      <span>{publication.rank}</span>
+                      {publication.rank.map((rank) => (
+                        <span
+                          key={rank}
+                          className={rank === "CCF A" ? "rank-ccf-a" : rank === "中科院一区 TOP" ? "rank-cas-q1" : undefined}
+                        >
+                          {rank}
+                        </span>
+                      ))}
                       <a
                         className="paper-link"
                         href={publication.pdf}
@@ -382,47 +449,47 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section service-section" id="service">
-          <div className="shell">
+        <section className="section community-section service-section" id="service">
+          <div className="shell community-layout">
             <div className="section-heading">
               <div>
-                <p className="section-kicker">03 · Community</p>
-                <h2>学术服务与教学</h2>
+                <p className="section-kicker">03 · Academic Service</p>
+                <h2>学术服务</h2>
               </div>
-              <p>参与国际安全会议审稿与 Artifact Evaluation，并承担网络空间安全专业课程教学。</p>
             </div>
+            <dl className="academic-service-list community-body">
+              <div>
+                <dt>Reviewer</dt>
+                <dd>Cluster Computing</dd>
+              </div>
+              <div>
+                <dt>External Reviewer</dt>
+                <dd>USENIX Security 2025、ACM CCS 2024、EURO S&amp;P 2024、TDSC 2023、ESORICS、TOSEM 等</dd>
+              </div>
+              <div>
+                <dt>AEC Member</dt>
+                <dd>31st ACM Conference on Computer and Communications Security</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
 
-            <div className="service-grid">
-              <article>
-                <span className="service-label">Academic Service</span>
-                <h3>学术服务</h3>
-                <ul>
-                  <li>Reviewer：Cluster Computing</li>
-                  <li>
-                    External Reviewer：USENIX Security 2025、ACM CCS 2024、EURO S&amp;P 2024、TDSC 2023、ESORICS、TOSEM 等
-                  </li>
-                  <li>AEC Member：31st ACM Conference on Computer and Communications Security</li>
-                </ul>
-              </article>
-              <article>
-                <span className="service-label">Teaching</span>
-                <h3>课程教学</h3>
-                <ul>
-                  <li>《恶意代码分析》</li>
-                  <li>《网络安全概论》</li>
-                  <li>《数字取证技术》</li>
-                </ul>
-              </article>
-              <article>
-                <span className="service-label">Projects</span>
-                <h3>主持项目</h3>
-                <ul>
-                  <li>青年基金</li>
-                  <li>一流网络安全创新资助计划</li>
-                  <li>河南省重点科研项目</li>
-                </ul>
-              </article>
+        <section className="section community-section teaching-section" id="teaching">
+          <div className="shell community-layout">
+            <div className="section-heading">
+              <div>
+                <p className="section-kicker">04 · Teaching</p>
+                <h2>课程教学</h2>
+              </div>
             </div>
+            <ul className="course-list community-body">
+              {["《恶意代码分析》", "《网络安全概论》", "《数字取证技术》"].map((course) => (
+                <li key={course}>
+                  <BookOpen size={18} aria-hidden="true" />
+                  <span>{course}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -465,7 +532,7 @@ export default function Home() {
             <p>Cybersecurity researcher and lecturer.</p>
           </div>
           <a href="mailto:shishuai@zua.edu.cn">shishuai@zua.edu.cn</a>
-          <p className="updated">最后更新于 2026.10.03</p>
+          <p className="updated">最后更新于 2026.10.04</p>
         </div>
       </footer>
     </main>
