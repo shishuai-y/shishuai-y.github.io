@@ -211,13 +211,6 @@ const publicationFigures = new Map(
   figureSources.map((figure) => [`./papers/${figure.file}`, figure]),
 );
 
-const interests = [
-  "自动化漏洞挖掘",
-  "LLM 驱动安全分析",
-  "移动生态安全",
-  "物联网系统安全",
-];
-
 const courses = [
   { title: "《恶意代码分析》", type: "选修课", theory: 32, practical: 16 },
   { title: "《网络安全概论》", type: "必修课", theory: 32, practical: 16 },
@@ -282,7 +275,6 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="shell hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Cybersecurity Researcher · Lecturer</p>
             <h1>
               杨士帅
               <span>Shishuai Yang</span>
@@ -292,10 +284,8 @@ export default function Home() {
                 Dr. Shishuai Yang is a lecturer at Zhengzhou University of Aeronautics.
                 His research focuses on automated vulnerability discovery, LLM-driven
                 security analysis, and the security of mobile ecosystems and IoT systems.
-              </p>
-              <p>
-                He received his doctorate from the School of Cyber Science and Engineering,
-                Shandong University (advisor: {" "}
+                {" "}He received his doctorate from the School of Cyber Science and Engineering,
+                Shandong University, through a combined master&apos;s-doctoral program (advisor: {" "}
                 <a href="https://diaowenrui.github.io/" target="_blank" rel="noreferrer">
                   Prof. Wenrui Diao
                 </a>
@@ -304,14 +294,8 @@ export default function Home() {
                 <a href="https://baigd.github.io/" target="_blank" rel="noreferrer">
                   Prof. Guangdong Bai
                 </a>
-                . He earned his master&apos;s and bachelor&apos;s degrees from Shandong University
-                and Henan University, respectively.
+                . He earned his bachelor&apos;s degree from Henan University.
               </p>
-            </div>
-            <div className="interest-list" aria-label="研究方向">
-              {interests.map((interest) => (
-                <span key={interest}>{interest}</span>
-              ))}
             </div>
             <div className="hero-actions">
               <a className="primary-action" href="mailto:shishuai@zua.edu.cn">
