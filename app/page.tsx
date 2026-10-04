@@ -1,5 +1,6 @@
-import { BookOpen, FileText, Mail, Trophy } from "lucide-react";
+import { BookOpen, CodeXml, FileText, GraduationCap, Mail, Trophy } from "lucide-react";
 import MotionEffects from "./motion-effects";
+import PaperFigure from "./paper-figure";
 import figureSources from "../public/paper-figures/sources.json";
 
 type Publication = {
@@ -10,7 +11,7 @@ type Publication = {
   authors: string;
   title: string;
   note?: string;
-  correspondingAuthor?: boolean;
+  correspondingAuthors?: string[];
   pdf: string;
 };
 
@@ -24,6 +25,7 @@ const publications: Publication[] = [
     title:
       "EvidenceMalGraph: An evidence-grounded modular framework for Android malware family attribution and campaign analysis",
     pdf: "./papers/eswa2027-evidencemalgraph.pdf",
+    correspondingAuthors: ["W. Ren"],
   },
   {
     year: "2026",
@@ -34,6 +36,7 @@ const publications: Publication[] = [
     title:
       "RuleDroid: LLM-Augmented Synthesis of Static Security Detection Rules for Android Apps",
     pdf: "./papers/tse2026-ruledroid.pdf",
+    correspondingAuthors: ["W. Diao"],
   },
   {
     year: "2026",
@@ -44,7 +47,7 @@ const publications: Publication[] = [
     title:
       "Dialing Danger: Large-Scale Mining and Risk Assessment of Android Secret Codes in OEM Firmware",
     pdf: "./papers/saner2026-dialing-danger.pdf",
-    correspondingAuthor: true,
+    correspondingAuthors: ["S. Yang", "W. Diao"],
   },
   {
     year: "2025",
@@ -55,6 +58,7 @@ const publications: Publication[] = [
     title:
       "FirmProj: Detecting Firmware Leakage in IoT Update Processes via Companion App Analysis",
     pdf: "./papers/ase2025-firmproj.pdf",
+    correspondingAuthors: ["W. Diao"],
   },
   {
     year: "2024",
@@ -65,6 +69,7 @@ const publications: Publication[] = [
     title:
       "Beyond the Horizon: Exploring Cross-Market Security Discrepancies in Parallel Android Apps",
     pdf: "./papers/issre2024-beyond-the-horizon.pdf",
+    correspondingAuthors: ["G. Bai", "W. Diao"],
   },
   {
     year: "2024",
@@ -75,6 +80,7 @@ const publications: Publication[] = [
     title:
       "Android's Cat-and-Mouse Game: Understanding Evasion Techniques against Dynamic Analysis",
     pdf: "./papers/issre2024-cat-and-mouse.pdf",
+    correspondingAuthors: ["W. Diao"],
   },
   {
     year: "2024",
@@ -86,6 +92,7 @@ const publications: Publication[] = [
     title:
       "From Promises to Practice: Evaluating the Private Browsing Modes of Android Browser Apps",
     pdf: "./papers/www2024-private-browsing.pdf",
+    correspondingAuthors: ["L. Ying", "W. Diao"],
   },
   {
     year: "2024",
@@ -96,6 +103,7 @@ const publications: Publication[] = [
     title:
       "Understanding Android OS Forward Compatibility Support for Legacy Apps: A Data-Driven Analysis",
     pdf: "./papers/saner2024-forward-compatibility.pdf",
+    correspondingAuthors: ["W. Diao"],
   },
   {
     year: "2023",
@@ -106,6 +114,7 @@ const publications: Publication[] = [
     title:
       "Lost in Conversion: Exploit Data Structure Conversion with Attribute Loss to Break Android Systems",
     pdf: "./papers/usenix2023-lost-in-conversion.pdf",
+    correspondingAuthors: ["W. Diao"],
     note: "CVE-2021-39695 · CVE-2022-20392 · CVE-2023-20971",
   },
   {
@@ -116,6 +125,7 @@ const publications: Publication[] = [
     authors: "S. Yang, Q. Hou, S. Li, and W. Diao",
     title: "Do App Developers Follow the Android Official Security Guidelines?",
     pdf: "./papers/apsec2023-security-guidelines.pdf",
+    correspondingAuthors: ["W. Diao"],
   },
   {
     year: "2022",
@@ -125,6 +135,7 @@ const publications: Publication[] = [
     authors: "S. Yang, R. Li, J. Chen, W. Diao, and S. Guo",
     title: "Demystifying Android Non-SDK APIs: Measurement and Understanding",
     pdf: "./papers/icse2022-non-sdk-apis.pdf",
+    correspondingAuthors: ["W. Diao"],
   },
   {
     year: "2022",
@@ -134,6 +145,7 @@ const publications: Publication[] = [
     authors: "G. Tian, J. Chen, K. Yan, S. Yang, and W. Diao",
     title: "Cast Away: On the Security of DLNA Deployments in the SmartTV Ecosystem",
     pdf: "./papers/qrs2022-cast-away.pdf",
+    correspondingAuthors: ["J. Chen", "W. Diao"],
     note: "CNVD-2022-54667 · CNVD-2022-34589",
   },
   {
@@ -145,6 +157,7 @@ const publications: Publication[] = [
     title:
       "From Guidelines to Practice: Assessing Android App Developer Compliance with Google's Security Recommendations",
     pdf: "./papers/emse2025-security-recommendations.pdf",
+    correspondingAuthors: ["W. Diao"],
   },
   {
     year: "—",
@@ -155,6 +168,7 @@ const publications: Publication[] = [
     title:
       "Investigating Cross-Market Android Apps: Security, Protection, and Components",
     pdf: "./papers/emse2026-cross-market-apps.pdf",
+    correspondingAuthors: ["W. Diao"],
   },
   {
     year: "—",
@@ -165,7 +179,7 @@ const publications: Publication[] = [
     title:
       "Understanding Security Risks in Mobile-to-PC Screen Mirroring: An Empirical Study",
     pdf: "./papers/cybersecurity2025-screen-mirroring.pdf",
-    correspondingAuthor: true,
+    correspondingAuthors: ["S. Yang", "W. Diao"],
   },
   {
     year: "—",
@@ -176,6 +190,7 @@ const publications: Publication[] = [
     title:
       "Android Custom Permissions Demystified: A Comprehensive Security Evaluation",
     pdf: "./papers/tse2022-custom-permissions.pdf",
+    correspondingAuthors: ["W. Diao"],
   },
 ];
 
@@ -294,6 +309,7 @@ export default function Home() {
             </div>
             <div className="hero-actions">
               <a className="primary-action" href="mailto:shishuai@zua.edu.cn">
+                <Mail size={16} aria-hidden="true" />
                 shishuai@zua.edu.cn
               </a>
               <a
@@ -302,7 +318,12 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
+                <GraduationCap size={17} aria-hidden="true" />
                 Google Scholar <span aria-hidden="true">↗</span>
+              </a>
+              <a className="text-action" href="https://github.com/shishuai-y" target="_blank" rel="noreferrer">
+                <CodeXml size={16} aria-hidden="true" />
+                GitHub <span aria-hidden="true">↗</span>
               </a>
             </div>
           </div>
@@ -371,23 +392,13 @@ export default function Home() {
                 const figureUrl = `./paper-figures/${figure.file.slice(0, -4)}.webp?v=${figure.clip.join("-")}`;
                 return (
                 <article className="publication" data-kind={publication.kind} key={publication.title}>
-                  <a
-                    className="pub-thumbnail"
-                    href={figureUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`查看论文图示：${publication.title}`}
-                    title={`${figure.figure} · ${figure.description}`}
-                  >
-                    <img
+                  <PaperFigure
                       src={figureUrl}
                       alt={figure.description}
+                      title={publication.title}
                       width={Math.round((figure.clip[2] - figure.clip[0]) * 3)}
                       height={Math.round((figure.clip[3] - figure.clip[1]) * 3)}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </a>
+                  />
                   <div className="pub-body">
                     <div className="pub-labels">
                       <span>{publication.year}</span>
@@ -415,18 +426,23 @@ export default function Home() {
                     </div>
                     <h3>{publication.title}</h3>
                     <p>
-                      {publication.authors.split(/(\bS\. Yang\b)/).map((author, index) =>
-                        author === "S. Yang" ? (
-                          <strong key={index}>
-                            {author}
-                            {publication.correspondingAuthor && (
+                      {publication.authors.split(", ").map((entry, index) => {
+                        const author = entry.replace(/^and /, "");
+                        return (
+                          <span key={index}>
+                            {index > 0 && ", "}
+                            {entry.startsWith("and ") && "and "}
+                            <span className="author-name">
+                              {author === "S. Yang" ? <strong>{author}</strong> : author}
+                              {publication.correspondingAuthors?.includes(author) && (
                               <span className="corresponding-author" title="通讯作者" role="img" aria-label="通讯作者">
                                 <Mail size={13} aria-hidden="true" />
                               </span>
-                            )}
-                          </strong>
-                        ) : author,
-                      )}
+                              )}
+                            </span>
+                          </span>
+                        );
+                      })}
                     </p>
                     {publication.note && <small>{publication.note}</small>}
                   </div>
