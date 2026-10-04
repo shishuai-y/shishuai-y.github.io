@@ -334,11 +334,17 @@ export default function Home() {
       <div id="content">
         <section className="section news-section" id="news" aria-labelledby="news-heading">
           <div className="shell news-layout">
-            <h2 id="news-heading">News</h2>
+            <h2 id="news-heading">
+              <span className="news-heading-icon" aria-hidden="true">🔥</span>
+              <span>News</span>
+            </h2>
             <ul className="news-list">
               <li>
-                <time dateTime="2026-09">Sep 2026:</time>
-                <span>One paper accepted by ESWA 2027</span>
+                <span className="news-entry-icon" aria-hidden="true">🎉</span>
+                <div className="news-entry-text">
+                  <time dateTime="2026-09">Sep 2026:</time>
+                  <span>One paper accepted by ESWA 2027</span>
+                </div>
               </li>
             </ul>
           </div>

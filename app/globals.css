@@ -407,25 +407,55 @@ footer a:hover {
 }
 
 .news-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin: 0 0 14px;
   border-bottom: 1px solid #d4e3ee;
   padding-bottom: 12px;
   font-family: inherit;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.2;
 }
 
 .news-list {
   margin: 0;
-  padding: 0 0 0 20px;
-  list-style: disc;
+  padding: 0;
+  list-style: none;
 }
 
 .news-list li {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 10px;
   color: var(--ink);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
+}
+
+.news-list li + li {
+  margin-top: 10px;
+}
+
+.news-heading-icon,
+.news-entry-icon {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+  font-weight: 400;
+}
+
+.news-heading-icon {
+  font-size: 24px;
+}
+
+.news-entry-icon {
+  font-size: 20px;
+}
+
+.news-entry-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .news-list time {
