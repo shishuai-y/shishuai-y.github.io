@@ -1,4 +1,4 @@
-import { BookOpen, FileText, Trophy } from "lucide-react";
+import { BookOpen, FileText, Mail, Trophy } from "lucide-react";
 import MotionEffects from "./motion-effects";
 import figureSources from "../public/paper-figures/sources.json";
 
@@ -10,6 +10,7 @@ type Publication = {
   authors: string;
   title: string;
   note?: string;
+  correspondingAuthor?: boolean;
   pdf: string;
 };
 
@@ -22,7 +23,6 @@ const publications: Publication[] = [
     authors: "S. Yang, X. Li, K. Yan, C. Wang, W. Ren, Y. Chen, and K. Chen",
     title:
       "EvidenceMalGraph: An evidence-grounded modular framework for Android malware family attribution and campaign analysis",
-    note: "第一作者",
     pdf: "./papers/eswa2027-evidencemalgraph.pdf",
   },
   {
@@ -44,7 +44,7 @@ const publications: Publication[] = [
     title:
       "Dialing Danger: Large-Scale Mining and Risk Assessment of Android Secret Codes in OEM Firmware",
     pdf: "./papers/saner2026-dialing-danger.pdf",
-    note: "共同通讯作者",
+    correspondingAuthor: true,
   },
   {
     year: "2025",
@@ -65,7 +65,6 @@ const publications: Publication[] = [
     title:
       "Beyond the Horizon: Exploring Cross-Market Security Discrepancies in Parallel Android Apps",
     pdf: "./papers/issre2024-beyond-the-horizon.pdf",
-    note: "第一作者",
   },
   {
     year: "2024",
@@ -117,7 +116,6 @@ const publications: Publication[] = [
     authors: "S. Yang, Q. Hou, S. Li, and W. Diao",
     title: "Do App Developers Follow the Android Official Security Guidelines?",
     pdf: "./papers/apsec2023-security-guidelines.pdf",
-    note: "第一作者",
   },
   {
     year: "2022",
@@ -127,7 +125,6 @@ const publications: Publication[] = [
     authors: "S. Yang, R. Li, J. Chen, W. Diao, and S. Guo",
     title: "Demystifying Android Non-SDK APIs: Measurement and Understanding",
     pdf: "./papers/icse2022-non-sdk-apis.pdf",
-    note: "第一作者",
   },
   {
     year: "2022",
@@ -148,7 +145,6 @@ const publications: Publication[] = [
     title:
       "From Guidelines to Practice: Assessing Android App Developer Compliance with Google's Security Recommendations",
     pdf: "./papers/emse2025-security-recommendations.pdf",
-    note: "第一作者",
   },
   {
     year: "—",
@@ -159,7 +155,6 @@ const publications: Publication[] = [
     title:
       "Investigating Cross-Market Android Apps: Security, Protection, and Components",
     pdf: "./papers/emse2026-cross-market-apps.pdf",
-    note: "第一作者",
   },
   {
     year: "—",
@@ -170,7 +165,7 @@ const publications: Publication[] = [
     title:
       "Understanding Security Risks in Mobile-to-PC Screen Mirroring: An Empirical Study",
     pdf: "./papers/cybersecurity2025-screen-mirroring.pdf",
-    note: "共同通讯作者",
+    correspondingAuthor: true,
   },
   {
     year: "—",
@@ -421,7 +416,16 @@ export default function Home() {
                     <h3>{publication.title}</h3>
                     <p>
                       {publication.authors.split(/(\bS\. Yang\b)/).map((author, index) =>
-                        author === "S. Yang" ? <strong key={index}>{author}</strong> : author,
+                        author === "S. Yang" ? (
+                          <strong key={index}>
+                            {author}
+                            {publication.correspondingAuthor && (
+                              <span className="corresponding-author" title="通讯作者" role="img" aria-label="通讯作者">
+                                <Mail size={13} aria-hidden="true" />
+                              </span>
+                            )}
+                          </strong>
+                        ) : author,
                       )}
                     </p>
                     {publication.note && <small>{publication.note}</small>}

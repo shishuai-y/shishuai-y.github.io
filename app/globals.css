@@ -672,12 +672,19 @@ footer a:hover {
 .publication p {
   margin: 0;
   color: var(--ink);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.6;
 }
 
 .publication p strong {
   font-weight: 700;
+}
+
+.corresponding-author {
+  display: inline-flex;
+  margin-left: 4px;
+  vertical-align: -2px;
+  color: var(--ink);
 }
 
 .publication small {
