@@ -197,17 +197,17 @@ const publications: Publication[] = [
 const publicationStats = [
   {
     key: "conference",
-    label: "会议论文",
+    label: "Conference Papers",
     count: publications.filter((paper) => paper.kind === "conference").length,
   },
   {
     key: "journal",
-    label: "期刊论文",
+    label: "Journal Papers",
     count: publications.filter((paper) => paper.kind === "journal").length,
   },
   {
     key: "cas-q1",
-    label: "中科院一区",
+    label: "CAS Q1",
     count: publications.filter((paper) => paper.rank.some((rank) => rank.startsWith("中科院一区"))).length,
   },
   {
@@ -266,29 +266,23 @@ export default function Home() {
         <div className="shell nav-row">
           <a className="wordmark" href="#top" aria-label="返回首页">
             <span>YS</span>
-            <strong>杨士帅</strong>
+            <strong>Shishuai Yang</strong>
           </a>
           <nav aria-label="主要导航">
             <a href="#news">News</a>
-            <a href="#publications">论文</a>
-            <a href="#opensource">开源</a>
-            <a href="#service">服务</a>
-            <a href="#teaching">教学</a>
-            <a href="#awards">获奖</a>
+            <a href="#publications">Publications</a>
+            <a href="#opensource">Open Source</a>
+            <a href="#service">Service</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#awards">Awards</a>
           </nav>
-          <a className="nav-contact" href="mailto:shishuai@zua.edu.cn">
-            联系我
-          </a>
         </div>
       </header>
 
       <section className="hero" id="top">
         <div className="shell hero-grid">
           <div className="hero-copy">
-            <h1>
-              杨士帅
-              <span>Shishuai Yang</span>
-            </h1>
+            <h1>Shishuai Yang</h1>
             <div className="intro" lang="en">
               <p>
                 Dr. Shishuai Yang is a lecturer at Zhengzhou University of Aeronautics.
@@ -331,7 +325,7 @@ export default function Home() {
             <div className="portrait-frame">
               <img
                 src="./profile.jpg"
-                alt="杨士帅的个人照片"
+                alt="Portrait of Shishuai Yang"
                 width="900"
                 height="1200"
               />
@@ -368,19 +362,19 @@ export default function Home() {
             <div className="section-heading publication-heading">
               <div>
                 <p className="section-kicker">01 · Publications</p>
-                <h2>科研成果</h2>
+                <h2>Publications</h2>
               </div>
               <div className="publication-count">
                 <strong>{publications.length}</strong>
-                <span>篇论文</span>
+                <span>papers</span>
               </div>
             </div>
 
-            <dl className="publication-stats" aria-label="论文统计">
+            <dl className="publication-stats" aria-label="Publication statistics">
               {publicationStats.map((stat) => (
                 <div key={stat.key} data-stat={stat.key}>
                   <dt>{stat.label}</dt>
-                  <dd>{stat.count}<span>篇</span></dd>
+                  <dd>{stat.count}<span>papers</span></dd>
                 </div>
               ))}
             </dl>
@@ -606,7 +600,7 @@ export default function Home() {
       <footer>
         <div className="shell footer-grid">
           <div>
-            <p className="footer-name">杨士帅 · Shishuai Yang</p>
+            <p className="footer-name">Shishuai Yang</p>
             <p>Cybersecurity researcher and lecturer.</p>
           </div>
           <a href="mailto:shishuai@zua.edu.cn">shishuai@zua.edu.cn</a>
