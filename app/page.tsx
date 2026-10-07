@@ -226,35 +226,35 @@ const publicationFigures = new Map(
 );
 
 const courses = [
-  { title: "Malware Analysis", type: "Elective", theory: 32, practical: 16 },
-  { title: "Introduction to Cybersecurity", type: "Required", theory: 32, practical: 16 },
-  { title: "Digital Forensics", type: "Elective", theory: 40, practical: 8 },
+  { title: "《恶意代码分析》", type: "选修课", theory: 32, practical: 16 },
+  { title: "《网络安全概论》", type: "必修课", theory: 32, practical: 16 },
+  { title: "《数字取证技术》", type: "选修课", theory: 40, practical: 8 },
 ];
 
 const studentAwards = [
   {
-    competition: "Henan Jindun Xin'an Cup Cyber and Data Security Competition",
-    edition: "7th Edition",
-    prizes: [{ text: "Provincial Third Prize", place: 3 }],
+    competition: "河南省“金盾信安杯”网络与数据安全大赛",
+    edition: "第七届",
+    prizes: [{ text: "省级三等奖", place: 3 }],
   },
   {
-    competition: "Yuwang Cup Cybersecurity Competition",
-    edition: "10th Edition · Online Challenge",
+    competition: "“御网杯”网络安全大赛",
+    edition: "第十届 · 线上挑战赛",
     prizes: [
-      { text: "First Prize × 3", place: 1 },
-      { text: "Second Prize × 6", place: 2 },
-      { text: "Third Prize × 3", place: 3 },
+      { text: "一等奖 × 3", place: 1 },
+      { text: "二等奖 × 6", place: 2 },
+      { text: "三等奖 × 3", place: 3 },
     ],
   },
   {
-    competition: "C4 Network Technology Challenge",
-    edition: "2026 · Qualifying Round",
-    prizes: [{ text: "Third Prize", place: 3 }],
+    competition: "C4 网络技术挑战赛",
+    edition: "2026年 · 选拔赛",
+    prizes: [{ text: "三等奖", place: 3 }],
   },
   {
-    competition: "China Graduate Electronics Design Contest",
-    edition: "21st Edition · Central China Region",
-    prizes: [{ text: "Second Prize", place: 2 }],
+    competition: "中国研究生电子设计竞赛",
+    edition: "第二十一届 · 华中赛区",
+    prizes: [{ text: "二等奖", place: 2 }],
   },
 ];
 
@@ -549,7 +549,7 @@ export default function Home() {
                 <h2>Teaching</h2>
               </div>
             </div>
-            <ul className="course-list community-body">
+            <ul className="course-list community-body" lang="zh-CN">
               {courses.map((course) => (
                 <li key={course.title}>
                   <div className="course-heading">
@@ -560,8 +560,8 @@ export default function Home() {
                     <span className="course-type">{course.type}</span>
                   </div>
                   <div className="course-details">
-                    <span className="course-hours">{course.theory + course.practical} hours</span>
-                    <span className="course-split">Lectures: {course.theory} h + Labs: {course.practical} h</span>
+                    <span className="course-hours">{course.theory + course.practical} 学时</span>
+                    <span className="course-split">理论 {course.theory} 学时 + 上机 {course.practical} 学时</span>
                   </div>
                 </li>
               ))}
@@ -576,7 +576,7 @@ export default function Home() {
               <p className="award-count">{studentAwards.length} competitions</p>
             </div>
             <div className="award-scroll" role="region" aria-label="Awards of supervised students" tabIndex={0}>
-            <ol className="award-list">
+            <ol className="award-list" lang="zh-CN">
               {studentAwards.map((award) => (
                 <li className="award-item" key={award.competition}>
                   <div className="award-symbol" aria-hidden="true">
