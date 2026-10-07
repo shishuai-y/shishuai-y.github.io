@@ -877,6 +877,7 @@ footer a:hover {
 }
 
 .repository-details dd {
+  white-space: nowrap;
   margin: 6px 0 0;
   font-size: 22px;
   line-height: 1.1;
@@ -961,6 +962,22 @@ footer a:hover {
   align-items: start;
 }
 
+.section:not(.news-section) > .shell {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 24px;
+}
+
+.section .opensource-layout,
+.section .community-layout {
+  display: block;
+}
+
+.section .opensource-layout .section-heading,
+.section .community-layout .section-heading {
+  margin-bottom: 20px;
+}
+
 .community-section .section-heading {
   display: block;
   margin: 0;
@@ -1034,6 +1051,7 @@ footer a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .course-type {
@@ -1068,6 +1086,7 @@ footer a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  flex-wrap: wrap;
   margin-bottom: 16px;
 }
 
@@ -1166,6 +1185,13 @@ footer a:hover {
 }
 
 @media (max-width: 680px) {
+  .section:not(.news-section) > .shell {
+    padding: 16px;
+  }
+
+  .publication-heading h2 {
+    font-size: 32px;
+  }
   .section.awards-section {
     padding: 32px 0;
   }

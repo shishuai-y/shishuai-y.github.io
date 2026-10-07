@@ -46,7 +46,7 @@ export default function PaperFigure({ src, alt, title, width, height }: Props) {
         ref={trigger}
         type="button"
         className="pub-thumbnail"
-        aria-label={`查看论文图示：${title}`}
+        aria-label={`View paper figure: ${title}`}
         aria-haspopup="dialog"
         onPointerEnter={(event) => { if (event.pointerType === "mouse" && !hoverBlocked.current) setHovered(true); }}
         onPointerLeave={() => { hoverBlocked.current = false; setHovered(false); }}
@@ -58,7 +58,7 @@ export default function PaperFigure({ src, alt, title, width, height }: Props) {
         <div className={`figure-preview-layer${pinned ? " is-pinned" : ""}`} onClick={pinned ? close : undefined}>
           <div className="figure-preview" role={pinned ? "dialog" : undefined} aria-modal={pinned ? true : undefined} aria-label={title} onClick={(event) => event.stopPropagation()}>
             {pinned && (
-              <button ref={closeButton} type="button" className="figure-preview-close" onClick={close} aria-label="关闭图示" title="关闭图示">
+              <button ref={closeButton} type="button" className="figure-preview-close" onClick={close} aria-label="Close figure" title="Close figure">
                 <X size={20} aria-hidden="true" />
               </button>
             )}

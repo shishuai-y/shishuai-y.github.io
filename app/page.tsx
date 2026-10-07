@@ -8,6 +8,7 @@ type Publication = {
   venue: string;
   kind: "conference" | "journal";
   rank: string[];
+  casQ1?: boolean;
   authors: string;
   title: string;
   note?: string;
@@ -20,7 +21,8 @@ const publications: Publication[] = [
     year: "2027",
     venue: "ESWA",
     kind: "journal",
-    rank: ["中科院一区 TOP"],
+    rank: ["Q1"],
+    casQ1: true,
     authors: "S. Yang, X. Li, K. Yan, C. Wang, W. Ren, Y. Chen, and K. Chen",
     title:
       "EvidenceMalGraph: An evidence-grounded modular framework for Android malware family attribution and campaign analysis",
@@ -31,7 +33,8 @@ const publications: Publication[] = [
     year: "2026",
     venue: "IEEE TSE",
     kind: "journal",
-    rank: ["中科院一区", "Q1", "CCF A"],
+    rank: ["Q1", "CCF A"],
+    casQ1: true,
     authors: "Z. Xie, M. Chen, Y. Gao, S. Yang, W. Diao, Xiangyu Liu",
     title:
       "RuleDroid: LLM-Augmented Synthesis of Static Security Detection Rules for Android Apps",
@@ -185,7 +188,8 @@ const publications: Publication[] = [
     year: "—",
     venue: "IEEE TSE",
     kind: "journal",
-    rank: ["中科院一区", "CCF A", "JCR Q1"],
+    rank: ["Q1", "CCF A"],
+    casQ1: true,
     authors: "R. Li, W. Diao, Z. Li, S. Yang, S. Li, and S. Guo",
     title:
       "Android Custom Permissions Demystified: A Comprehensive Security Evaluation",
@@ -208,7 +212,7 @@ const publicationStats = [
   {
     key: "cas-q1",
     label: "CAS Q1",
-    count: publications.filter((paper) => paper.rank.some((rank) => rank.startsWith("中科院一区"))).length,
+    count: publications.filter((paper) => paper.casQ1).length,
   },
   {
     key: "ccf-a",
@@ -222,35 +226,35 @@ const publicationFigures = new Map(
 );
 
 const courses = [
-  { title: "《恶意代码分析》", type: "选修课", theory: 32, practical: 16 },
-  { title: "《网络安全概论》", type: "必修课", theory: 32, practical: 16 },
-  { title: "《数字取证技术》", type: "选修课", theory: 40, practical: 8 },
+  { title: "Malware Analysis", type: "Elective", theory: 32, practical: 16 },
+  { title: "Introduction to Cybersecurity", type: "Required", theory: 32, practical: 16 },
+  { title: "Digital Forensics", type: "Elective", theory: 40, practical: 8 },
 ];
 
 const studentAwards = [
   {
-    competition: "河南省“金盾信安杯”网络与数据安全大赛",
-    edition: "第七届",
-    prizes: [{ text: "省级三等奖", place: 3 }],
+    competition: "Henan Jindun Xin'an Cup Cyber and Data Security Competition",
+    edition: "7th Edition",
+    prizes: [{ text: "Provincial Third Prize", place: 3 }],
   },
   {
-    competition: "“御网杯”网络安全大赛",
-    edition: "第十届 · 线上挑战赛",
+    competition: "Yuwang Cup Cybersecurity Competition",
+    edition: "10th Edition · Online Challenge",
     prizes: [
-      { text: "一等奖 × 3", place: 1 },
-      { text: "二等奖 × 6", place: 2 },
-      { text: "三等奖 × 3", place: 3 },
+      { text: "First Prize × 3", place: 1 },
+      { text: "Second Prize × 6", place: 2 },
+      { text: "Third Prize × 3", place: 3 },
     ],
   },
   {
-    competition: "C4 网络技术挑战赛",
-    edition: "2026年 · 选拔赛",
-    prizes: [{ text: "三等奖", place: 3 }],
+    competition: "C4 Network Technology Challenge",
+    edition: "2026 · Qualifying Round",
+    prizes: [{ text: "Third Prize", place: 3 }],
   },
   {
-    competition: "中国研究生电子设计竞赛",
-    edition: "第二十一届 · 华中赛区",
-    prizes: [{ text: "二等奖", place: 2 }],
+    competition: "China Graduate Electronics Design Contest",
+    edition: "21st Edition · Central China Region",
+    prizes: [{ text: "Second Prize", place: 2 }],
   },
 ];
 
@@ -259,16 +263,16 @@ export default function Home() {
     <main>
       <MotionEffects />
       <a className="skip-link" href="#content">
-        跳到主要内容
+        Skip to content
       </a>
 
       <header className="site-header">
         <div className="shell nav-row">
-          <a className="wordmark" href="#top" aria-label="返回首页">
+          <a className="wordmark" href="#top" aria-label="Back to top">
             <span>YS</span>
             <strong>Shishuai Yang</strong>
           </a>
-          <nav aria-label="主要导航">
+          <nav aria-label="Main navigation">
             <a href="#news">News</a>
             <a href="#publications">Publications</a>
             <a href="#opensource">Open Source</a>
@@ -388,7 +392,7 @@ export default function Home() {
                 <article className="publication" data-kind={publication.kind} key={publication.title}>
                   <PaperFigure
                       src={figureUrl}
-                      alt={figure.description}
+                      alt={`Framework diagram for ${publication.title}`}
                       title={publication.title}
                       width={Math.round((figure.clip[2] - figure.clip[0]) * 3)}
                       height={Math.round((figure.clip[3] - figure.clip[1]) * 3)}
@@ -400,7 +404,7 @@ export default function Home() {
                       {publication.rank.map((rank) => (
                         <span
                           key={rank}
-                          className={rank === "CCF A" ? "rank-ccf-a" : rank.startsWith("中科院一区") ? "rank-cas-q1" : undefined}
+                          className={rank === "CCF A" ? "rank-ccf-a" : rank === "Q1" && publication.casQ1 ? "rank-cas-q1" : undefined}
                         >
                           {rank}
                         </span>
@@ -411,8 +415,8 @@ export default function Home() {
                         target="_blank"
                         rel="noreferrer"
                         type="application/pdf"
-                        aria-label={`查看 PDF：${publication.title}`}
-                        title="查看论文 PDF"
+                        aria-label={`View PDF: ${publication.title}`}
+                        title="View paper PDF"
                       >
                         <FileText size={14} aria-hidden="true" />
                         PDF
@@ -429,7 +433,7 @@ export default function Home() {
                             <span className="author-name">
                               {author === "S. Yang" ? <strong>{author}</strong> : author}
                               {publication.correspondingAuthors?.includes(author) && (
-                              <span className="corresponding-author" title="通讯作者" role="img" aria-label="通讯作者">
+                              <span className="corresponding-author" title="Corresponding author" role="img" aria-label="Corresponding author">
                                 (
                                 <Mail size={13} aria-hidden="true" />
                                 )
@@ -454,7 +458,7 @@ export default function Home() {
             <div className="section-heading">
               <div>
                 <p className="section-kicker">02 · Open Source</p>
-                <h2>开源项目</h2>
+                <h2>Open Source</h2>
               </div>
             </div>
             <article className="repository">
@@ -469,16 +473,16 @@ export default function Home() {
                   </a>
                 </h3>
                 <p className="repository-description">
-                  面向 Android API 16–33 的权限映射数据集，整理 SDK API、
-                  ContentProvider 与 Intent 的权限关联，为 Android 应用安全分析与跨版本研究提供数据支持。
+                  Permission mappings for Android API levels 16–33, covering SDK APIs,
+                  ContentProviders, and Intents for app security analysis and cross-version research.
                 </p>
-                <ul className="repository-topics" aria-label="权限映射类型">
+                <ul className="repository-topics" aria-label="Permission mapping types">
                   <li>SDK</li>
                   <li>ContentProvider</li>
                   <li>Intent</li>
                 </ul>
                 <p className="repository-paper">
-                  关联论文 · ISSRE 2024
+                  Related Paper · ISSRE 2024
                   <a
                     href="https://doi.org/10.1109/ISSRE62328.2024.00059"
                     target="_blank"
@@ -495,7 +499,7 @@ export default function Home() {
                     <dd>16–33</dd>
                   </div>
                   <div>
-                    <dt>权限映射类型</dt>
+                    <dt>Mapping Types</dt>
                     <dd>3</dd>
                   </div>
                 </dl>
@@ -505,7 +509,7 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  查看 GitHub 仓库 <span aria-hidden="true">↗</span>
+                  View on GitHub <span aria-hidden="true">↗</span>
                 </a>
               </div>
             </article>
@@ -517,7 +521,7 @@ export default function Home() {
             <div className="section-heading">
               <div>
                 <p className="section-kicker">03 · Academic Service</p>
-                <h2>学术服务</h2>
+                <h2>Academic Service</h2>
               </div>
             </div>
             <dl className="academic-service-list community-body">
@@ -527,7 +531,7 @@ export default function Home() {
               </div>
               <div>
                 <dt>External Reviewer</dt>
-                <dd>USENIX Security 2025、ACM CCS 2024、EURO S&amp;P 2024、TDSC 2023、ESORICS、TOSEM 等</dd>
+                <dd>USENIX Security 2025, ACM CCS 2024, EURO S&amp;P 2024, TDSC 2023, ESORICS, TOSEM, and others</dd>
               </div>
               <div>
                 <dt>AEC Member</dt>
@@ -542,7 +546,7 @@ export default function Home() {
             <div className="section-heading">
               <div>
                 <p className="section-kicker">04 · Teaching</p>
-                <h2>课程教学</h2>
+                <h2>Teaching</h2>
               </div>
             </div>
             <ul className="course-list community-body">
@@ -556,8 +560,8 @@ export default function Home() {
                     <span className="course-type">{course.type}</span>
                   </div>
                   <div className="course-details">
-                    <span className="course-hours">{course.theory + course.practical} 学时</span>
-                    <span className="course-split">理论 {course.theory} 学时 + 上机 {course.practical} 学时</span>
+                    <span className="course-hours">{course.theory + course.practical} hours</span>
+                    <span className="course-split">Lectures: {course.theory} h + Labs: {course.practical} h</span>
                   </div>
                 </li>
               ))}
@@ -568,10 +572,10 @@ export default function Home() {
         <section className="section awards-section" id="awards">
           <div className="shell">
             <div className="section-heading awards-heading">
-              <h2>指导学生获奖</h2>
-              <p className="award-count">{studentAwards.length} 项赛事</p>
+              <h2>Student Awards</h2>
+              <p className="award-count">{studentAwards.length} competitions</p>
             </div>
-            <div className="award-scroll" role="region" aria-label="指导学生获奖列表" tabIndex={0}>
+            <div className="award-scroll" role="region" aria-label="Awards of supervised students" tabIndex={0}>
             <ol className="award-list">
               {studentAwards.map((award) => (
                 <li className="award-item" key={award.competition}>
@@ -582,7 +586,7 @@ export default function Home() {
                     <h3>{award.competition}</h3>
                     <p className="award-edition">{award.edition}</p>
                   </div>
-                  <ul className="award-results" aria-label="所获奖项">
+                  <ul className="award-results" aria-label="Prizes">
                     {award.prizes.map((prize) => (
                       <li className="award-prize" data-place={prize.place} key={prize.text}>
                         {prize.text}
@@ -604,7 +608,7 @@ export default function Home() {
             <p>Cybersecurity researcher and lecturer.</p>
           </div>
           <a href="mailto:shishuai@zua.edu.cn">shishuai@zua.edu.cn</a>
-          <p className="updated">最后更新于 2026.10.04</p>
+          <p className="updated">Last updated: October 7, 2026</p>
         </div>
       </footer>
     </main>
