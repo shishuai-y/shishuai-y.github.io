@@ -365,7 +365,6 @@ export default function Home() {
           <div className="shell">
             <div className="section-heading publication-heading">
               <div>
-                <p className="section-kicker">01 · Publications</p>
                 <h2>Publications</h2>
               </div>
               <div className="publication-count">
@@ -457,7 +456,6 @@ export default function Home() {
           <div className="shell opensource-layout">
             <div className="section-heading">
               <div>
-                <p className="section-kicker">02 · Open Source</p>
                 <h2>Open Source</h2>
               </div>
             </div>
@@ -520,7 +518,6 @@ export default function Home() {
           <div className="shell community-layout">
             <div className="section-heading">
               <div>
-                <p className="section-kicker">03 · Academic Service</p>
                 <h2>Academic Service</h2>
               </div>
             </div>
@@ -545,7 +542,6 @@ export default function Home() {
           <div className="shell community-layout">
             <div className="section-heading">
               <div>
-                <p className="section-kicker">04 · Teaching</p>
                 <h2>Teaching</h2>
               </div>
             </div>
