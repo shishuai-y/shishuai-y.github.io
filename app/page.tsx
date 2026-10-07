@@ -177,7 +177,7 @@ const publications: Publication[] = [
     year: "—",
     venue: "Cybersecurity",
     kind: "journal",
-    rank: ["CCF C", "JCR Q1"],
+    rank: ["CCF B", "JCR Q1"],
     authors: "Z. Qiu, S. Yang, Y. Yu, Y. Luo, and W. Diao",
     title:
       "Understanding Security Risks in Mobile-to-PC Screen Mirroring: An Empirical Study",
