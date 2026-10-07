@@ -155,7 +155,7 @@ const publications: Publication[] = [
     year: "—",
     venue: "ESEM",
     kind: "journal",
-    rank: ["CCF B", "JCR Q1"],
+    rank: ["CCF B", "Q2"],
     authors: "S. Yang, Q. Hou, S. Li, F. Xu, and W. Diao",
     title:
       "From Guidelines to Practice: Assessing Android App Developer Compliance with Google's Security Recommendations",
@@ -166,7 +166,7 @@ const publications: Publication[] = [
     year: "—",
     venue: "ESEM",
     kind: "journal",
-    rank: ["CCF B", "JCR Q1"],
+    rank: ["CCF B", "Q2"],
     authors: "S. Yang, R. Lin, J. Guo, G. Bai, Y. Luo, and W. Diao",
     title:
       "Investigating Cross-Market Android Apps: Security, Protection, and Components",
@@ -177,7 +177,7 @@ const publications: Publication[] = [
     year: "—",
     venue: "Cybersecurity",
     kind: "journal",
-    rank: ["CCF B", "JCR Q1"],
+    rank: ["CCF B", "Q3"],
     authors: "Z. Qiu, S. Yang, Y. Yu, Y. Luo, and W. Diao",
     title:
       "Understanding Security Risks in Mobile-to-PC Screen Mirroring: An Empirical Study",
