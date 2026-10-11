@@ -126,9 +126,9 @@ const publications: Publication[] = [
     kind: "conference",
     rank: ["CCF C", "CORE C"],
     authors: "S. Yang, Q. Hou, S. Li, and W. Diao",
-    title: "Do App Developers Follow the Android Official Security Guidelines?",
+    title: "Do App Developers Follow the Android Official Data Security Guidelines? An Empirical Measurement on App Data Security",
     pdf: "./papers/apsec2023-security-guidelines.pdf",
-    correspondingAuthors: ["W. Diao"],
+    correspondingAuthors: ["Q. Hou", "W. Diao"],
   },
   {
     year: "2022",
@@ -197,6 +197,20 @@ const publications: Publication[] = [
     correspondingAuthors: ["W. Diao"],
   },
 ];
+
+const sortedPublications = [...publications].sort((a, b) => {
+  const isLeadAuthor = (paper: Publication) =>
+    paper.authors.startsWith("S. Yang,") ||
+    paper.correspondingAuthors?.includes("S. Yang") === true;
+  const rankPriority = (paper: Publication) => {
+    if (paper.casQ1 || paper.rank.includes("CCF A")) return 0;
+    if (paper.rank.includes("Q2") || paper.rank.includes("CCF B")) return 1;
+    return 2;
+  };
+  return Number(isLeadAuthor(b)) - Number(isLeadAuthor(a)) ||
+    rankPriority(a) - rankPriority(b) ||
+    (Number.parseInt(b.year, 10) || 0) - (Number.parseInt(a.year, 10) || 0);
+});
 
 const publicationStats = [
   {
@@ -383,7 +397,7 @@ export default function Home() {
             </dl>
 
             <div className="publication-list">
-              {publications.map((publication) => {
+              {sortedPublications.map((publication) => {
                 const figure = publicationFigures.get(publication.pdf);
                 if (!figure) throw new Error(`Missing figure for ${publication.title}`);
                 const figureUrl = `./paper-figures/${figure.file.slice(0, -4)}.webp?v=${figure.clip.join("-")}`;
