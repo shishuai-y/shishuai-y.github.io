@@ -198,10 +198,11 @@ const publications: Publication[] = [
   },
 ];
 
+const isLeadAuthor = (paper: Publication) =>
+  paper.authors.startsWith("S. Yang,") ||
+  paper.correspondingAuthors?.includes("S. Yang") === true;
+
 const sortedPublications = [...publications].sort((a, b) => {
-  const isLeadAuthor = (paper: Publication) =>
-    paper.authors.startsWith("S. Yang,") ||
-    paper.correspondingAuthors?.includes("S. Yang") === true;
   const rankPriority = (paper: Publication) => {
     if (paper.casQ1 || paper.rank.includes("CCF A")) return 0;
     if (paper.rank.includes("Q2") || paper.rank.includes("CCF B")) return 1;
@@ -396,8 +397,9 @@ export default function Home() {
               ))}
             </dl>
 
-            <div className="publication-list">
-              {sortedPublications.map((publication) => {
+            {[true, false].map((leadGroup) => {
+              const group = sortedPublications.filter((paper) => isLeadAuthor(paper) === leadGroup);
+              const papers = group.map((publication) => {
                 const figure = publicationFigures.get(publication.pdf);
                 if (!figure) throw new Error(`Missing figure for ${publication.title}`);
                 const figureUrl = `./paper-figures/${figure.file.slice(0, -4)}.webp?v=${figure.clip.join("-")}`;
@@ -461,8 +463,16 @@ export default function Home() {
                   </div>
                 </article>
                 );
-              })}
-            </div>
+              });
+              return leadGroup ? (
+                <div className="publication-list" key="lead">{papers}</div>
+              ) : (
+                <details className="other-publications" key="other">
+                  <summary>More <span>({group.length} papers)</span></summary>
+                  <div className="publication-list">{papers}</div>
+                </details>
+              );
+            })}
           </div>
         </section>
 

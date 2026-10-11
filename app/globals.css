@@ -565,6 +565,28 @@ footer a:hover {
   display: grid;
 }
 
+.other-publications {
+  margin-top: 16px;
+}
+
+.other-publications summary {
+  padding: 16px 0;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.other-publications summary span {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.other-publications summary:focus-visible {
+  outline: 2px solid #2453d4;
+  outline-offset: 4px;
+}
+
 .publication {
   display: grid;
   grid-template-columns: 200px minmax(0, 1fr);
