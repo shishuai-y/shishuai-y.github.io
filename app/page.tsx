@@ -1,5 +1,6 @@
 import { BookOpen, CodeXml, FileText, GraduationCap, Mail, Trophy } from "lucide-react";
 import MotionEffects from "./motion-effects";
+import ParticleField from "./particle-field";
 import PaperFigure from "./paper-figure";
 import figureSources from "../public/paper-figures/sources.json";
 
@@ -299,6 +300,7 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
+        <ParticleField />
         <div className="shell hero-grid">
           <div className="hero-copy">
             <h1>Shishuai Yang</h1>
